@@ -25,7 +25,7 @@ function copiarEmail() {
 }
 
 // Som ao clicar
-const somClique = new Audio("../sons/switch-sound.mp3");
+const somClique = new Audio("sons/switch-sound.mp3");
 
 function tocarSom() {
   somClique.currentTime = 0;
@@ -33,11 +33,10 @@ function tocarSom() {
 }
 
 // Trocar de página ao clicar
-if (window.location.pathname.endsWith("index.html")) {
-  document.addEventListener("keydown", function () {
-    window.location.href = "html/switch-home.html";
-  });
-}
+const base = window.location.origin + window.location.pathname.split('/').slice(0, 2).join('/');
+document.addEventListener("keydown", () => {
+  window.location.href = `${base}/html/switch-home.html`;
+});
 
 // Texto sublinhado na navbar
 const currentPage = window.location.pathname.split("/").pop();
