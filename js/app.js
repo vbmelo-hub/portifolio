@@ -35,7 +35,7 @@ function tocarSom() {
 // Trocar de página ao clicar
 if (window.location.pathname.endsWith("index.html")) {
   document.addEventListener("keydown", function () {
-    window.location.href = "switch-home.html";
+    window.location.href = "html/switch-home.html";
   });
 }
 
