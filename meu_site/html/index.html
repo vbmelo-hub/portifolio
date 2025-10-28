@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="img/switch.png">
+    <link rel="stylesheet" href="../css/switch.css">
+    <script src="../js/app.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+    <body>
+        <div id="controll">
+            <div id="left_joycon">
+                <img id="menos" src="img/menos.png" alt="menos">
+                <img id="left_stick" src="img/left_stick.svg" alt="stick">
+                <img id="button_arrow" src="img/buttons_arrow_joycon.svg" alt="botões" onclick="tocarSom()">
+            </div>
+            <div id="profile">
+                <img id="mario" src="img/mario.png" alt="Mario">
+                <h1 class="noto-sans">Seja Bem Vindo(a)!</h1>
+                <p>Pressione qualquer botão do teclado para continuar...</p>
+                <div class="redes">
+                    <a href="https://github.com/vbmelo-hub" target="_blank">
+                        <img src="img/Github.svg" alt="Github">
+                    </a>
+                    <a href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                        <img src="img/Linkedin.svg" alt="Linkedin">
+                    </a>
+                    <a href="https://www.instagram.com/vinixius_ba/" target="_blank">
+                        <img src="img/Instagram.svg" alt="instagram">
+                    </a>
+                        <img src="img/Discord.svg" alt="Discord" onclick="copiarTexto()" style="cursor: pointer;">
+                </div>
+            </div>
+            <div id="right_joycon">
+                <img id="mais" src="img/+.svg" alt="mais">
+                <img id="button_joycon" src="img/buttons_joycon.png" alt="botões" onclick="tocarSom()">
+                <img id="right_stick" src="img/left_stick.svg" alt="right stick">
+                <img id="home" src="img/Home.png" alt="Home" onclick="tocarSom()">
+            </div>
+        </div>
+    </body>
+</html>

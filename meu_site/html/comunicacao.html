@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="icon" href="img/Vimeo.svg">
+    <script src="../js/app.js" defer></script>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicação</title>
+  </head>
+  <body>
+    <header id="navbar">
+      <div id="logo">
+        <a href="sobremim.html">
+            <img src="img/Vimeo.svg" alt="Vimeo logo">
+        </a>
+      </div>
+      <ul>
+        <li class="hovering"><a href="switch-home.html">HOME</a></li>
+        <li class="hovering"><a href="sobremim.html">SOBRE</a></li>
+        <li class="hovering"><a href="skills.html">SKILLS</a></li>
+        <li class="hovering"><a href="experiencias.html">EXPERIÊNCIAS</a></li>
+        <li class="hovering">
+          <a href="comunicacao.html" id="active">COMUNICAÇÃO</a>
+        </li>
+        <li class="hovering">
+          <a
+            href="../content/curriculo-vinicius-barros.pdf"
+            download="curriculo-vinicius-barros.pdf"
+            target="_blank"
+            >CURRICULUM VITAE</a
+          >
+        </li>
+      </ul>
+      <div class="nav-right"></div>
+    </header>
+    <main>
+      <form
+        action="mailto:vinicius.meloin@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <div>
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome completo"
+            required
+          >
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seuemail@exemplo.com"
+            required
+          >
+        </div>
+        <div>
+          <label for="mensagem">Mensagem:</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="6"
+            placeholder="Escreva sua mensagem aqui..."
+            required
+          ></textarea>
+        </div>
+        <div>
+          <button type="submit">Enviar Mensagem</button>
+        </div>
+      </form>
+    </main>
+  </body>
+  <table>
+    <tr>
+      <td
+        class="hovering"
+        onclick="copiarEmail()"
+        tabindex="0"
+        onkeyup="handleKey(event)"
+      >
+        email
+      </td>
+      <td class="hovering">
+        <a href="https://github.com/vbmelo-hub" target="_blank">github</a>
+      </td>
+      <td class="hovering">
+        <a
+          href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
+          >linkedin</a
+        >
+      </td>
+      <td class="hovering">
+        <a href="https://www.instagram.com/vinixius_ba/" target="_blank"
+          >instagram</a
+        >
+      </td>
+    </tr>
+  </table>
+</html>

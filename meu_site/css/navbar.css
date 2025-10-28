@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+}
+
+html, body {
+    display: flex;
+    background: #08070B;
+    height: 100%;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+a#active {
+    background: linear-gradient(180deg, #9E46A6 0%, #FAC3FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: underline;
+    text-underline-offset: 0.82vh; 
+    text-decoration-thickness: 0.27vh; 
+    text-decoration-color: #FAC3FF; 
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    color: #FFF;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 0.19vh;
+    gap: 3.84vh;
+    padding: 0;
+}
+
+header#navbar {
+    display: flex;
+    padding: 4vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+table {
+    color: white;
+    width: 0vh;
+    align-self: center;
+}
+
+.hovering {
+    transition: transform 200ms ease-in-out;
+    cursor: pointer;
+}
+
+.hovering:hover{
+    transform: scale(1.05);
+}
+
+td{
+    padding-left: 4vh;
+    font-size: 2.1vh;
+}
+
+div#logo img{
+    width: 6.85vh;
+    height: 6.85vh;
+}

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+}
+
+body {
+    background-color: #D3D3D3;
+}
+
+/* NAVBAR */
+
+header#navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 4vh;
+    align-items: center;
+}
+
+div#logo {
+    display: flex;
+}
+
+div#logo img {
+    height: 10.15vh;
+}
+
+div#logo p {
+    align-self: center;
+    padding-left: 4.8vh;
+    color: #1E1E1E;
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.39vh;
+}
+
+div#wifibateria img{
+    height: 6.44vh;
+    padding-right: 5.07vh;
+}
+
+/* PRINCIPAL */
+
+nav#navegacao {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    margin-top: 10vh;
+}
+
+nav#navegacao img {
+    height: 45vh;
+    transition: opacity 200ms ease-in-out;
+}
+
+nav#navegacao .imagem-topo:hover {
+    opacity: 0;
+}
+
+.container-imagem {
+  position: relative;
+  width: 45vh; 
+  height: 45vh; 
+  cursor: pointer; 
+}
+
+.container-imagem img {
+  position: absolute; 
+}
+
+.imagem-topo {
+    z-index: 1;
+}
+
+
+div#redes {
+    width: 129.49vh;
+    height: 13.71vh;
+    border-radius: 50px;
+    background: #FFF;
+    margin-top: 7vh;
+    justify-self: center;
+    align-content: center;
+    text-align: center;
+}
+
+div#redes-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+div#redes-icons img {
+    justify-self: center;
+    height: 10.01vh;
+    transition: transform 200ms ease-in-out;
+}
+
+div#redes-icons img:hover {
+    transform: scale(1.05);
+}

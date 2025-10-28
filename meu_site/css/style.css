@@ -1,0 +1,137 @@
+/* ====================================================== SOBRE MIM ====================================================== */
+h1 {
+    padding-left: 12vh;
+    font-size: 5vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.18vh;
+    background: linear-gradient(90deg, #9E46A6 0%, #FAC3FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.paragrafos {
+    width: 66.39vh;
+    color: #FFF;
+    font-size: 2.2vh;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.16vh;
+    padding-top: 7vh;
+    justify-self: left;
+}
+
+div.paragrafos p{
+    padding-bottom: 4.93vh;
+}
+
+div#sobremim {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+div#sobremim img {
+    margin-left: 5vh;
+    padding-top: 5vh;
+    height: 50vh;
+    justify-self: center;
+}
+
+/* ============================================================================================================ */
+
+
+
+
+
+
+/* ====================================================== SKILLS ====================================================== */
+
+div.linguagens {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    justify-content: center;
+    margin-top: 9vh;
+}
+
+div.linguagens img {
+    height: 20vh;
+}
+
+/* ============================================================================================================ */
+
+
+
+
+
+
+/* ====================================================== EXPERIÊNCIAS ====================================================== */
+div.experiencias {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: center;
+    margin-top: 9vh;
+    margin-top: 0;
+}
+
+div.experiencias img {
+    height: 35vh;
+    padding-left: 4vh;
+}
+
+div#webAcademy {
+    justify-self: center;
+    margin-top: 4vh;
+}
+
+div#webAcademy img {
+    padding-left: 4vh;
+       height: 35vh;
+}
+/* ============================================================================================================ */
+
+
+
+
+
+
+/* ====================================================== COMUNICAÇÃO ====================================================== */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+        
+button {
+    background-color: #7b2e82;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b343bd;
+}

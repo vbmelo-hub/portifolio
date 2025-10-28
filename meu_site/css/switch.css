@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #1F1F1F;
+}
+
+/* TELA INTEIRA  (JOYCON-LEFT, PROFILE E JOYCON-RIGHT) */
+div#controll{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+}
+
+
+/* JOYCON-LEFT */
+div#left_joycon{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-content:  center;
+    background-color: #743636;
+    width: 38vh;
+    height: 100vh;
+}
+
+img#button_arrow {
+    margin-top: 15.08vh;
+    width: 26vh;
+    height: 26vh;
+    cursor: pointer;
+}
+
+img#left_stick{
+    justify-self: center;
+    margin-top: 12.34vh;
+    width: 19vh;
+    height: 19vh;
+    cursor: pointer;
+}
+
+img#menos {
+    justify-self: right;
+    margin-top: 6.58vh;
+    width: 5.5vh;
+    height: 1vh;
+    cursor: pointer;
+}
+
+
+/* JOYCON-RIGHT */
+div#right_joycon {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    background-color: #2F739E;
+    width: 38vh;
+    height: 100vh;
+}
+
+img#mais {
+    margin-top: 6.58vh;
+    width: 5.5vh;
+    height: 5.5vh;
+    cursor: pointer;
+}
+
+img#button_joycon {
+    margin-top: 8.23vh;
+    width: 26vh;
+    height: 26vh;
+    cursor: pointer;
+}
+
+.stick {
+  width: 60px;
+  height: 60px;
+  background: #666;
+  border-radius: 50%;
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  transition: top 0.05s, left 0.05s;
+}
+
+img#right_stick {
+    justify-self: center;
+    margin-top: 12.34vh;
+    width: 19vh;
+    height: 19vh;
+    cursor: pointer;
+}
+
+img#home {
+    margin-top: 7.54vh;
+    width: 8.3vh;
+    height: 8.3vh;
+    cursor: pointer;
+}
+
+
+/* PROFILE */
+div#profile {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+}
+
+img#mario {
+    width: 24.7vh;
+    height: 24.7vh;
+}
+
+div#profile h1 {
+    color: #FFF;
+    font-size: 6vh;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 0.40vh;
+
+}
+
+div#profile p {
+    color: #FFF;
+    font-size: 4vh;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    letter-spacing: 0.30vh;
+}
+
+div.redes {
+    justify-content: center;
+    display: flex;
+    gap: 5vh;
+    margin: 6vh 6vh;
+}
+
+div.redes img {
+    height: 7vh;
+    width: 7vh;
+}
