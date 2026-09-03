@@ -1,62 +1,339 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <script>document.documentElement.classList.add('js');</script>
-    <link rel="icon" href="img/Vimeo.svg">
+
+    <!-- Indica que o JavaScript está disponível -->
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- Ícone da página -->
+    <link rel="icon" href="img/logo-vb-navbar.svg" type="image/svg+xml">
+
+    <!-- JavaScript -->
     <script src="../js/app.js" defer></script>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/ux.css">
+
+    <!-- Configurações -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#08070b">
-    <title>Sobre mim</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08070b"
+    >
+
+    <meta
+        name="description"
+        content="Portfólio de Vinícius Barros de Melo, estudante de Sistemas para Internet, desenvolvedor e profissional com experiência em desenvolvimento de sistemas, dados e automação."
+    >
+
+    <title>Sobre mim | Vinícius Barros de Melo</title>
+
 </head>
+
+
 <body data-page="internal">
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
     <header id="navbar">
+
+        <!-- Logo -->
         <div id="logo">
-            <a href="sobremim.html" aria-label="Ir para Sobre mim">
-                <img src="img/Vimeo.svg" alt="Vimeo logo">
+
+            <a
+                href="sobremim.html"
+                aria-label="Ir para a página Sobre mim"
+            >
+
+                <img
+                    src="img/Vimeo.svg"
+                    alt="Logo de Vinícius Barros"
+                >
+
             </a>
+
         </div>
-        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
-            <span></span><span></span><span></span>
+
+
+        <!-- Botão mobile -->
+        <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
         </button>
-        <nav class="site-nav" aria-label="Navegação principal">
+
+
+        <!-- Navegação -->
+        <nav
+            class="site-nav"
+            aria-label="Navegação principal"
+        >
+
             <ul id="primary-navigation">
-                <li class="hovering"><a href="switch-home.html">HOME</a></li>
-                <li class="hovering"><a href="sobremim.html">SOBRE</a></li>
-                <li class="hovering"><a href="skills.html">SKILLS</a></li>
-                <li class="hovering"><a href="experiencias.html">EXPERIÊNCIAS</a></li>
-                <li class="hovering"><a href="comunicacao.html">COMUNICAÇÃO</a></li>
-                <li class="hovering"><a href="../content/curriculo-vinicius-barros.pdf" download="curriculo-vinicius-barros.pdf" target="_blank" rel="noopener noreferrer">CURRICULUM VITAE</a></li>
+
+                <li class="hovering">
+                    <a href="switch-home.html">
+                        HOME
+                    </a>
+                </li>
+
+                <li class="hovering">
+                    <a href="sobremim.html">
+                        SOBRE
+                    </a>
+                </li>
+
+                <li class="hovering">
+                    <a href="skills.html">
+                        SKILLS
+                    </a>
+                </li>
+
+                <li class="hovering">
+                    <a href="projetos.html">
+                        PROJETOS
+                    </a>
+                </li>
+
+                <li class="hovering">
+                    <a href="experiencias.html">
+                        EXPERIÊNCIAS
+                    </a>
+                </li>
+
+                <li class="hovering">
+                    <a href="comunicacao.html">
+                        COMUNICAÇÃO
+                    </a>
+                </li>
+
+                <li class="hovering">
+
+                    <a
+                        href="../content/curriculo-vinicius-barros.pdf"
+                        download="curriculo-vinicius-barros.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        CURRICULUM VITAE
+                    </a>
+
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
 
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
     <main>
-        <h1>Olá, Seja Bem Vindo!</h1>
-        <div id="sobremim">
-            <img src="img/vinicius.png" alt="Vinícius" decoding="async">
-            <div class="paragrafos">
-                <p>Oi! Me chamo Vinícius, um apaixonado por tecnologia, criatividade e tudo o que envolve colocar a mão na massa — principalmente se for pra fazer a diferença no mundo.</p>
-                <p>Sou universitário no Instituto Federal do Acre, onde estudo Sistemas para Internet, e também sou bolsista no WebAcademy, um projeto de capacitação fullstack que tem me desafiado (e motivado) todos os dias.</p>
-                <p>Além do código, meu coração também bate forte pelo escotismo. Levo comigo todas as virtudes de um escoteiro: responsabilidade, respeito, serviço ao próximo, e claro, estar "Sempre Alerta para Servir"!</p>
-            </div>
-            <div class="paragrafos">
-                <p>Gosto de aprender coisas novas, organizar ideias, criar projetos e explorar soluções que unam propósito e inovação. Se você chegou até aqui por curiosidade, sinta-se em casa — meu portfólio é uma vitrine das coisas que gosto de fazer e estou aprendendo a fazer cada vez melhor.</p>
-                <p>Ah, e quando não estou programando ou acampando, provavelmente estou imaginando minha próxima aventura — seja ela digital ou em meio à natureza.</p>
-            </div>
+
+        <!-- Título -->
+        <h1>
+            Olá, Seja Bem-Vindo!
+        </h1>
+
+
+        <!-- =================================================
+             IDENTIDADE
+        ================================================== -->
+
+        <div class="sobre-identidade">
+
+            <span class="sobre-nome">
+                Vinícius Barros de Melo
+            </span>
+
+            <span class="sobre-cargo">
+                Sistemas para Internet • Desenvolvimento • Dados
+            </span>
+
         </div>
+
+
+
+        <!-- =================================================
+             SOBRE MIM
+        ================================================== -->
+
+        <div id="sobremim">
+
+
+            <!-- Foto -->
+            <img
+                src="img/vinicius.png"
+                alt="Vinícius Barros de Melo"
+                decoding="async"
+            >
+
+
+            <!-- Texto -->
+            <div class="sobre-texto">
+
+                <p>
+                    Sou estudante de
+                    <strong>
+                        Sistemas para Internet no Instituto Federal do Acre (IFAC)
+                    </strong>
+                    e atualmente atuo como estagiário no
+                    <strong>Sicoob Uni Acre</strong>,
+                    onde venho ampliando minha experiência com análise de dados,
+                    desenvolvimento de soluções e melhoria de processos.
+                </p>
+
+
+                <p>
+                    Ao longo da minha formação, participei de projetos acadêmicos
+                    e profissionais envolvendo
+                    <strong>
+                        desenvolvimento web, automação e análise de dados
+                    </strong>,
+                    utilizando tecnologias como Java, Spring Boot, Angular,
+                    GeneXus, Power BI, SQL e Python.
+                </p>
+
+
+                <p>
+                    Também participei do
+                    <strong>WebAcademy, da UFAC</strong>,
+                    trabalhando no desenvolvimento de sistemas reais em equipe,
+                    além de ter atuado anteriormente na
+                    <strong>Ktech</strong>
+                    com dashboards e soluções de Business Intelligence.
+                </p>
+
+
+                <p>
+                    Tenho interesse especial em
+                    <strong>
+                        desenvolvimento de sistemas, engenharia de software,
+                        dados e automação
+                    </strong>.
+                    Gosto de entender problemas, estruturar soluções e transformar
+                    processos manuais ou complexos em aplicações mais simples,
+                    organizadas e eficientes.
+                </p>
+
+
+                <p>
+                    Além da tecnologia, faço parte do
+                    <strong>Movimento Escoteiro</strong>
+                    há vários anos e atualmente integro o
+                    <strong>
+                        Clã Pioneiro Estrela Altaneira,
+                        do 4º Grupo Escoteiro Leôncio de Carvalho
+                    </strong>.
+                </p>
+
+
+                <p>
+                    Essa trajetória contribuiu diretamente para o desenvolvimento
+                    da minha liderança, responsabilidade, organização e capacidade
+                    de trabalhar em equipe. Durante minha trajetória no Clã,
+                    também tive a oportunidade de atuar na gestão da
+                    <strong>COMAD</strong>,
+                    exercendo a função de presidente em 2024 e vice-presidente
+                    em 2025 e 2026.
+                </p>
+
+
+                <p>
+                    Estou em constante aprendizado e busco oportunidades que me
+                    permitam evoluir tecnicamente, participar de projetos
+                    relevantes e construir soluções que gerem impacto real.
+                </p>
+
+            </div>
+
+        </div>
+
     </main>
 
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer class="site-footer">
+
         <nav aria-label="Redes sociais e contato">
-            <button type="button" class="footer-link hovering" data-copy-email>email</button>
-            <a class="footer-link hovering" href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer">github</a>
-            <a class="footer-link hovering" href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">linkedin</a>
-            <a class="footer-link hovering" href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer">instagram</a>
+
+
+            <!-- Email -->
+            <button
+                type="button"
+                class="footer-link hovering"
+                data-copy-email
+            >
+                email
+            </button>
+
+
+            <!-- GitHub -->
+            <a
+                class="footer-link hovering"
+                href="https://github.com/vbmelo-hub"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                github
+            </a>
+
+
+            <!-- LinkedIn -->
+            <a
+                class="footer-link hovering"
+                href="https://www.linkedin.com/in/vb-melo/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                linkedin
+            </a>
+
+
+            <!-- Instagram -->
+            <a
+                class="footer-link hovering"
+                href="https://www.instagram.com/vinixius_ba/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                instagram
+            </a>
+
         </nav>
+
     </footer>
+
+
 </body>
+
 </html>

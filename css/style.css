@@ -600,3 +600,949 @@ form.is-submitting .button-enviar button::after {
         border-color: rgba(255, 255, 255, 0.65);
     }
 }
+
+/* ====================================================== PROJETOS + TRAJETÓRIA PROFISSIONAL ====================================================== */
+.projects-page,
+.career-page {
+    padding-inline: clamp(18px, 4vw, 64px);
+}
+
+.page-intro {
+    width: min(100%, 1480px);
+    margin: 0 auto;
+    padding: clamp(22px, 3.5vh, 42px) 0 clamp(26px, 4vh, 48px);
+}
+
+.page-intro h1 {
+    width: auto;
+    margin: 5px 0 0;
+    padding: 0;
+    font-size: clamp(2.3rem, 4.5vw, 4.6rem);
+    letter-spacing: clamp(0.05rem, 0.55vw, 0.48rem);
+}
+
+.eyebrow {
+    color: #C87AD0;
+    font-size: clamp(0.72rem, 0.9vw, 0.86rem);
+    font-weight: 750;
+    letter-spacing: 0.17em;
+    line-height: 1.4;
+}
+
+.page-intro__text {
+    max-width: 820px;
+    margin-top: clamp(14px, 2vh, 20px);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.section-heading {
+    margin-bottom: clamp(22px, 3vh, 32px);
+}
+
+.section-heading h2 {
+    margin-top: 5px;
+    color: #FFF;
+    font-size: clamp(1.65rem, 2.6vw, 2.45rem);
+    font-weight: 650;
+    letter-spacing: -0.025em;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tech-tags li {
+    display: inline-flex;
+    align-items: center;
+    min-height: 31px;
+    border: 1px solid rgba(250, 195, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(250, 195, 255, 0.055);
+    padding: 6px 10px;
+    color: rgba(250, 225, 255, 0.88);
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* ---------- Projetos ---------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(18px, 2.3vw, 32px);
+    width: min(100%, 1480px);
+    margin: 0 auto;
+}
+
+.project-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-width: 0;
+    overflow: clip;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 28px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018)),
+        rgba(14, 11, 17, 0.82);
+    box-shadow: 0 22px 52px rgba(0, 0, 0, 0.2);
+    transition:
+        transform var(--ux-normal, 240ms) var(--ux-ease, ease-out),
+        border-color var(--ux-normal, 240ms) ease,
+        box-shadow var(--ux-normal, 240ms) ease;
+}
+
+.project-card--featured {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+    grid-template-rows: 1fr;
+}
+
+.project-cover {
+    position: relative;
+    display: flex;
+    min-height: 250px;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: clamp(24px, 4vw, 42px);
+    isolation: isolate;
+}
+
+.project-card:not(.project-card--featured) .project-cover {
+    min-height: 220px;
+}
+
+.project-cover::before,
+.project-cover::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(1px);
+}
+
+.project-cover::before {
+    top: -35%;
+    right: -10%;
+    width: 65%;
+    aspect-ratio: 1;
+    background: rgba(250, 195, 255, 0.13);
+}
+
+.project-cover::after {
+    bottom: -40%;
+    left: -10%;
+    width: 70%;
+    aspect-ratio: 1;
+    background: rgba(158, 70, 166, 0.16);
+}
+
+.project-cover--napne {
+    background: linear-gradient(145deg, #121324 0%, #31213A 58%, #513158 100%);
+}
+
+.project-cover--grimorio {
+    background: linear-gradient(145deg, #14101B 0%, #2E1C3B 55%, #67376E 100%);
+}
+
+.project-cover--commerce {
+    background: linear-gradient(145deg, #15141C 0%, #202337 54%, #33375D 100%);
+}
+
+.project-cover--portfolio {
+    background: linear-gradient(145deg, #131116 0%, #35203A 55%, #763E7D 100%);
+}
+
+.project-cover__kicker {
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 0.72rem;
+    font-weight: 750;
+    letter-spacing: 0.17em;
+}
+
+.project-cover strong {
+    max-width: 86%;
+    color: #FFF;
+    font-size: clamp(1.65rem, 3.2vw, 3.2rem);
+    font-weight: 750;
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+}
+
+.project-card:not(.project-card--featured) .project-cover strong {
+    font-size: clamp(1.45rem, 2.3vw, 2.2rem);
+}
+
+.project-cover__symbol {
+    position: absolute;
+    top: clamp(22px, 4vw, 40px);
+    right: clamp(22px, 4vw, 40px);
+    color: rgba(255, 255, 255, 0.2);
+    font-size: clamp(2.7rem, 6vw, 6rem);
+    font-weight: 800;
+    line-height: 1;
+}
+
+.project-content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: clamp(24px, 3.2vw, 38px);
+}
+
+.project-meta,
+.career-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    color: rgba(255, 255, 255, 0.52);
+    font-size: 0.78rem;
+    line-height: 1.35;
+}
+
+.project-status,
+.career-type {
+    display: inline-flex;
+    align-items: center;
+    min-height: 28px;
+    border-radius: 999px;
+    background: rgba(158, 70, 166, 0.2);
+    padding: 5px 10px;
+    color: #F4C8F8;
+    font-weight: 650;
+}
+
+.project-status--neutral {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.74);
+}
+
+.project-content h2 {
+    margin: 17px 0 10px;
+    color: #FFF;
+    font-size: clamp(1.45rem, 2.2vw, 2rem);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.project-content > p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: clamp(0.94rem, 1.2vw, 1.06rem);
+    font-weight: 300;
+    line-height: 1.68;
+}
+
+.project-role {
+    margin-top: 14px;
+}
+
+.project-role strong {
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 650;
+}
+
+.project-content .tech-tags {
+    margin-top: 20px;
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 24px;
+}
+
+.project-actions a,
+.projects-more a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    border: 1px solid rgba(250, 195, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.025);
+    padding: 9px 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.88rem;
+    font-weight: 550;
+    transition:
+        transform var(--ux-fast, 150ms) var(--ux-ease, ease-out),
+        border-color var(--ux-fast, 150ms) ease,
+        background-color var(--ux-fast, 150ms) ease;
+}
+
+.project-actions .project-action--primary {
+    border-color: rgba(250, 195, 255, 0.34);
+    background: linear-gradient(135deg, rgba(158, 70, 166, 0.32), rgba(250, 195, 255, 0.13));
+}
+
+.projects-more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: min(100%, 1480px);
+    margin: clamp(24px, 4vh, 44px) auto 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.025);
+    padding: clamp(20px, 3vw, 30px);
+}
+
+.projects-more h2 {
+    color: #FFF;
+    font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+    font-weight: 650;
+}
+
+.projects-more p {
+    max-width: 720px;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+/* ---------- Experiências ---------- */
+.career-section {
+    width: min(100%, 1480px);
+    margin: 0 auto;
+    padding-bottom: clamp(48px, 7vh, 82px);
+}
+
+.career-grid {
+    display: grid;
+    gap: clamp(18px, 2.2vw, 28px);
+}
+
+.career-grid--professional,
+.career-grid--secondary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.career-card,
+.career-compact-card,
+.leadership-card {
+    min-width: 0;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.042), rgba(255,255,255,0.018));
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+    transition:
+        transform var(--ux-normal, 240ms) var(--ux-ease, ease-out),
+        border-color var(--ux-normal, 240ms) ease,
+        box-shadow var(--ux-normal, 240ms) ease;
+}
+
+.career-card {
+    position: relative;
+    overflow: clip;
+}
+
+.career-card__link {
+    position: relative;
+    display: flex;
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+.career-brand {
+    position: relative;
+    display: grid;
+    min-height: 142px;
+    place-content: center;
+    justify-items: center;
+    overflow: hidden;
+    padding: 22px;
+    text-align: center;
+    isolation: isolate;
+}
+
+.career-brand::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -60px;
+    right: -20px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.055);
+}
+
+.career-brand strong {
+    margin-top: 8px;
+    color: #FFF;
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.career-brand small {
+    margin-top: 6px;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.76rem;
+    letter-spacing: 0.05em;
+}
+
+.career-brand--sicoob {
+    background: linear-gradient(135deg, #122929, #19383A 58%, #23464A);
+}
+
+.sicoob-symbol {
+    position: relative;
+    display: block;
+    width: 58px;
+    height: 42px;
+}
+
+.sicoob-symbol i {
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 12px;
+    border-radius: 999px;
+    background: #80BC00;
+    transform-origin: left center;
+}
+
+.sicoob-symbol i:nth-child(1) { left: 28px; top: 15px; transform: rotate(-48deg); }
+.sicoob-symbol i:nth-child(2) { left: 28px; top: 15px; transform: rotate(48deg); }
+.sicoob-symbol i:nth-child(3) { left: 2px; top: 15px; transform: rotate(0deg); }
+
+.career-brand--ktech {
+    background: linear-gradient(135deg, #111318, #20252B 58%, #2A3038);
+}
+
+.ktech-mark {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    border-radius: 15px;
+    background: linear-gradient(135deg, #262C33, #111419);
+    color: #7AC8B1;
+    font-size: 1.8rem;
+    font-weight: 850;
+}
+
+.career-brand--see {
+    background: linear-gradient(135deg, #19253A, #213C5C 58%, #285A70);
+}
+
+.see-mark {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F3C34D, #E7A938);
+    color: #1B2B3C;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+}
+
+.career-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.career-period {
+    color: #E9B8EF;
+    font-weight: 650;
+}
+
+.career-card__body h3,
+.career-compact-card h3,
+.leadership-card h3 {
+    color: #FFF;
+    font-weight: 680;
+    line-height: 1.25;
+}
+
+.career-card__body h3 {
+    margin-top: 15px;
+    font-size: clamp(1.18rem, 1.7vw, 1.45rem);
+}
+
+.career-role {
+    margin-top: 5px;
+    color: #D79BDC !important;
+    font-size: 0.9rem !important;
+    font-weight: 550 !important;
+}
+
+.career-card__body > p:not(.career-role) {
+    margin-top: 14px;
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 0.94rem;
+    font-weight: 300;
+    line-height: 1.62;
+}
+
+.career-card .tech-tags {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.career-arrow {
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    right: 14px;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 11px;
+    background: rgba(8, 7, 11, 0.48);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    transition: transform var(--ux-fast, 150ms) ease, border-color var(--ux-fast, 150ms) ease;
+}
+
+.career-compact-card {
+    overflow: hidden;
+}
+
+.career-compact-card > a {
+    position: relative;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 92px minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    padding: 20px 46px 20px 20px;
+}
+
+.career-compact-card img {
+    display: block;
+    width: 92px;
+    height: 92px;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+.career-compact-card h3 {
+    font-size: 1rem;
+}
+
+.career-compact-card p {
+    margin-top: 7px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.84rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.career-compact-card > a > span:last-child {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: rgba(255, 255, 255, 0.46);
+}
+
+.leadership-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.leadership-card > a {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(260px, 0.55fr) minmax(0, 1.45fr);
+    align-items: stretch;
+}
+
+.leadership-card__image {
+    display: grid;
+    min-height: 250px;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.025);
+    padding: 28px;
+}
+
+.leadership-card__image img {
+    display: block;
+    width: min(100%, 360px);
+    max-height: 220px;
+    object-fit: contain;
+}
+
+.leadership-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(28px, 4vw, 48px);
+}
+
+.leadership-card__content h3 {
+    margin-top: 14px;
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+.leadership-card__content > p:not(.leadership-highlight) {
+    margin-top: 12px;
+    max-width: 850px;
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 0.97rem;
+    font-weight: 300;
+    line-height: 1.65;
+}
+
+.leadership-highlight {
+    margin-top: 18px;
+    color: #EDB5F2;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.project-actions a:focus-visible,
+.projects-more a:focus-visible,
+.career-card a:focus-visible,
+.career-compact-card a:focus-visible,
+.leadership-card a:focus-visible {
+    outline: 3px solid #FAC3FF;
+    outline-offset: -3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .project-card:hover,
+    .career-card:hover,
+    .career-compact-card:hover,
+    .leadership-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(250, 195, 255, 0.22);
+        box-shadow: 0 26px 58px rgba(0, 0, 0, 0.25);
+    }
+
+    .project-actions a:hover,
+    .projects-more a:hover {
+        border-color: rgba(250, 195, 255, 0.48);
+        background-color: rgba(250, 195, 255, 0.07);
+        transform: translateY(-1px);
+    }
+
+    .career-card:hover .career-arrow,
+    .leadership-card:hover .career-arrow {
+        border-color: rgba(250, 195, 255, 0.45);
+        transform: translate(2px, -2px);
+    }
+}
+
+.project-card:active,
+.career-card:active,
+.career-compact-card:active,
+.leadership-card:active {
+    transform: scale(0.988);
+}
+
+@media (max-width: 1100px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-card--featured {
+        grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
+    }
+
+    .career-grid--professional,
+    .career-grid--secondary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .career-grid--professional .career-card:last-child,
+    .career-grid--secondary .career-compact-card:last-child {
+        grid-column: 1 / -1;
+        width: min(100%, 720px);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 760px) {
+    .projects-page,
+    .career-page {
+        padding-inline: 18px;
+    }
+
+    .page-intro {
+        padding-top: 18px;
+        text-align: left;
+    }
+
+    .page-intro h1 {
+        font-size: clamp(2.2rem, 11vw, 3.2rem);
+        letter-spacing: 0.05rem;
+        text-align: left;
+    }
+
+    .page-intro__text {
+        font-size: 0.98rem;
+        line-height: 1.62;
+    }
+
+    .projects-grid,
+    .career-grid--professional,
+    .career-grid--secondary {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card--featured {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .project-cover,
+    .project-card:not(.project-card--featured) .project-cover {
+        min-height: 205px;
+        padding: 24px;
+    }
+
+    .project-cover strong,
+    .project-card:not(.project-card--featured) .project-cover strong {
+        font-size: clamp(1.7rem, 8vw, 2.35rem);
+    }
+
+    .project-cover__symbol {
+        top: 22px;
+        right: 22px;
+        font-size: 3.7rem;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .projects-more {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .career-grid--professional .career-card:last-child,
+    .career-grid--secondary .career-compact-card:last-child {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .career-brand {
+        min-height: 128px;
+    }
+
+    .career-card__body {
+        padding: 22px;
+    }
+
+    .career-compact-card > a {
+        grid-template-columns: 76px minmax(0, 1fr);
+        gap: 15px;
+        padding: 18px 42px 18px 16px;
+    }
+
+    .career-compact-card img {
+        width: 76px;
+        height: 76px;
+    }
+
+    .leadership-card > a {
+        grid-template-columns: 1fr;
+    }
+
+    .leadership-card__image {
+        min-height: 128px;
+        padding: 24px 22px;
+    }
+
+    .leadership-card__image img {
+        width: min(100%, 300px);
+        max-height: 90px;
+    }
+
+    .leadership-card__content {
+        padding: 24px 22px 28px;
+    }
+}
+
+@media (max-width: 390px) {
+    .projects-page,
+    .career-page {
+        padding-inline: 14px;
+    }
+
+    .project-content,
+    .career-card__body {
+        padding-inline: 18px;
+    }
+
+    .tech-tags {
+        gap: 6px;
+    }
+
+    .tech-tags li {
+        padding-inline: 9px;
+        font-size: 0.74rem;
+    }
+
+    .career-compact-card > a {
+        grid-template-columns: 64px minmax(0, 1fr);
+        padding-left: 14px;
+    }
+
+    .career-compact-card img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* ====================================================== SOBRE MIM — LAYOUT ATUAL ====================================================== */
+#sobremim {
+    grid-template-columns: minmax(260px, 390px) minmax(0, 1fr);
+    gap: clamp(38px, 5vw, 78px);
+    width: min(100%, 1500px);
+    align-items: start;
+}
+
+#sobremim > img {
+    width: 100%;
+    max-width: 390px;
+    border-radius: 18px;
+}
+
+#sobremim .sobre-texto {
+    width: 100%;
+    min-width: 0;
+    color: #FFF;
+}
+
+#sobremim .sobre-texto p {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(1rem, 1.12vw, 1.17rem);
+    font-weight: 300;
+    line-height: 1.72;
+    text-align: left;
+}
+
+#sobremim .sobre-texto p + p {
+    margin-top: 1.15rem;
+}
+
+#sobremim .sobre-texto strong {
+    color: #FFF;
+    font-weight: 650;
+}
+
+@media (max-width: 900px) {
+    #sobremim {
+        grid-template-columns: 1fr;
+        width: min(100%, 720px);
+        gap: 28px;
+    }
+
+    #sobremim > img {
+        width: min(82vw, 330px);
+        justify-self: center;
+    }
+
+    #sobremim .sobre-texto p {
+        font-size: 1rem;
+        line-height: 1.68;
+    }
+}
+
+/* ======================================================
+   IDENTIDADE - SOBRE MIM
+====================================================== */
+
+.sobre-identidade {
+    width: min(1500px, 100%);
+    margin: 18px auto 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.sobre-nome {
+    color: #ffffff;
+
+    font-size: clamp(1.5rem, 2.4vw, 2.3rem);
+    font-weight: 600;
+
+    letter-spacing: 0.02rem;
+}
+
+.sobre-cargo {
+    background: linear-gradient(
+        90deg,
+        #9E46A6 0%,
+        #FAC3FF 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+
+    font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+    font-weight: 500;
+
+    letter-spacing: 0.03rem;
+}
+
+@media (max-width: 700px) {
+
+    .sobre-identidade {
+        margin-top: 14px;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .sobre-nome {
+        font-size: 1.45rem;
+    }
+
+    .sobre-cargo {
+        max-width: 320px;
+
+        font-size: 0.9rem;
+
+        line-height: 1.5;
+    }
+
+}
+
+/* Centraliza o título da página Sobre */
+main > h1 {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    margin-inline: auto;
+}

@@ -83,7 +83,7 @@ main {
 
 #navegacao {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: clamp(14px, 2.4vw, 42px);
     width: min(100%, 1660px);
     margin-top: clamp(18px, 4vh, 52px);
@@ -192,11 +192,30 @@ main {
     }
 }
 
-/* Tablets: dois cards por linha. */
-@media (max-width: 1099px) {
+/* Telas intermediárias: três cards por linha para manter boa leitura. */
+@media (max-width: 1240px) {
+    #navegacao {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: min(100%, 980px);
+    }
+
+    .container-imagem {
+        max-width: 300px;
+        justify-self: center;
+    }
+}
+
+/* Tablets estreitos e mobile: dois cards por linha. */
+@media (max-width: 760px) {
     #navegacao {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         width: min(100%, 760px);
+    }
+
+    #navegacao > a:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 6px);
+        justify-self: center;
     }
 
     .container-imagem {
@@ -292,7 +311,7 @@ main {
     }
 }
 
-/* Landscape baixo: mantém quatro cards quando a largura permite. */
+/* Landscape baixo: mantém os cinco atalhos em uma única linha quando a largura permite. */
 @media (max-height: 600px) and (orientation: landscape) and (min-width: 900px) {
     #navbar {
         padding-block: 14px;
@@ -316,7 +335,19 @@ main {
     }
 
     #navegacao {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        width: min(100%, 900px);
+        gap: 12px;
         margin-top: 6px;
+    }
+
+    #navegacao > a:last-child {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .container-imagem {
+        max-width: 150px;
     }
 
     #redes {

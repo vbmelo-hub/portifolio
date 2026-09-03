@@ -350,7 +350,7 @@ if (navbar && navToggle && siteNav) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 960 && navbar.classList.contains("nav-open")) {
+    if (window.innerWidth > 1180 && navbar.classList.contains("nav-open")) {
       closeMobileMenu();
     }
   });
@@ -364,10 +364,18 @@ function setupRevealAnimations() {
 
   const selectors = [
     "main > h1",
+    ".page-intro",
     "#sobremim > img",
     "#sobremim .paragrafos",
+    "#sobremim .sobre-texto",
     ".skills-group h2",
     ".skills-grid .skill-card",
+    ".project-card",
+    ".projects-more",
+    ".section-heading",
+    ".career-card",
+    ".career-compact-card",
+    ".leadership-card",
     ".experiencias > a",
     ".test",
     "form[data-contact-form]",

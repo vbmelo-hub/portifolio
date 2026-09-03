@@ -172,7 +172,7 @@ button {
 }
 
 /* A partir daqui a navegação horizontal deixa de ser confiável. */
-@media (max-width: 960px) {
+@media (max-width: 1180px) {
     #navbar {
         padding: 18px 20px;
     }
@@ -335,7 +335,7 @@ body.menu-open {
     }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1180px) {
     #navbar {
         z-index: 80;
         padding-top: max(18px, calc(var(--ux-safe-top, 0px) + 12px));
@@ -462,6 +462,7 @@ body.menu-open {
     #navbar.nav-open #primary-navigation li:nth-child(4) { transition-delay: 135ms; }
     #navbar.nav-open #primary-navigation li:nth-child(5) { transition-delay: 165ms; }
     #navbar.nav-open #primary-navigation li:nth-child(6) { transition-delay: 195ms; }
+    #navbar.nav-open #primary-navigation li:nth-child(7) { transition-delay: 225ms; }
 
     #navbar.nav-open .nav-toggle {
         position: fixed;
@@ -539,7 +540,7 @@ body.menu-open {
     }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1180px) {
     #primary-navigation a.active,
     #primary-navigation a[aria-current="page"] {
         box-shadow:
@@ -549,7 +550,7 @@ body.menu-open {
 }
 
 /* O drawer permanece dentro do viewport quando fechado; clip-path evita overflow horizontal causado por translateX. */
-@media (max-width: 960px) {
+@media (max-width: 1180px) {
     .site-nav {
         transform: none;
         clip-path: inset(0 0 0 100% round 24px 0 0 24px);

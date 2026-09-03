@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <script>document.documentElement.classList.add('js');</script>
-    <link rel="icon" href="img/Vimeo.svg">
+    <link rel="icon" href="img/logo-vb-icon.svg">
     <script src="../js/app.js" defer></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
@@ -27,6 +27,7 @@
                 <li class="hovering"><a href="switch-home.html">HOME</a></li>
                 <li class="hovering"><a href="sobremim.html">SOBRE</a></li>
                 <li class="hovering"><a href="skills.html">SKILLS</a></li>
+                <li class="hovering"><a href="projetos.html">PROJETOS</a></li>
                 <li class="hovering"><a href="experiencias.html">EXPERIÊNCIAS</a></li>
                 <li class="hovering"><a href="comunicacao.html">COMUNICAÇÃO</a></li>
                 <li class="hovering"><a href="../content/curriculo-vinicius-barros.pdf" download="curriculo-vinicius-barros.pdf" target="_blank" rel="noopener noreferrer">CURRICULUM VITAE</a></li>
@@ -34,28 +35,128 @@
         </nav>
     </header>
 
-    <main>
-        <div class="experiencias">
-            <a href="https://www.ifac.edu.br/home" target="_blank" rel="noopener noreferrer">
-                <img src="img/spi.png" alt="Sistemas Para Internet" class="hovering" decoding="async">
-            </a>
-            <a href="https://www.escoteiros.org.br" target="_blank" rel="noopener noreferrer">
-                <img src="img/escoteiros.png" alt="Escoteiros do Brasil" class="hovering" loading="lazy" decoding="async">
-            </a>
-            <a href="https://web.ifac.edu.br/incubac/eu-programo-robos/" target="_blank" rel="noopener noreferrer">
-                <img src="img/euProgramoRobos.png" alt="Eu Programo Robôs" class="hovering" loading="lazy" decoding="async">
-            </a>
-            <a href="https://webacademy.ufac.br" target="_blank" rel="noopener noreferrer" class="webacademy-card">
-                <img src="img/webAcademy.png" alt="Web Academy" class="hovering" loading="lazy" decoding="async">
-            </a>
-        </div>
+    <main class="career-page">
+        <header class="page-intro">
+            <p class="eyebrow">TRAJETÓRIA</p>
+            <h1>Experiências</h1>
+            <p class="page-intro__text">Minha trajetória combina experiência profissional em tecnologia, formação prática, projetos acadêmicos e liderança desenvolvida ao longo de anos no Movimento Escoteiro.</p>
+        </header>
+
+        <section class="career-section" aria-labelledby="profissional-title">
+            <div class="section-heading">
+                <p class="eyebrow">CARREIRA</p>
+                <h2 id="profissional-title">Experiência Profissional</h2>
+            </div>
+
+            <div class="career-grid career-grid--professional">
+                <article class="career-card">
+                    <a href="https://www.sicoob.com.br/web/sicoobuniacre/sicoob-uniacre" target="_blank" rel="noopener noreferrer" class="career-card__link">
+                        <div class="career-brand career-brand--sicoob" aria-label="Sicoob Uni Acre">
+                            <span class="sicoob-symbol" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <strong>SICOOB</strong><small>Uni Acre</small>
+                        </div>
+                        <div class="career-card__body">
+                            <div class="career-meta"><span class="career-period">ago. 2026 — atual</span><span class="career-type">Estágio</span></div>
+                            <h3>Sicoob Uni Acre</h3>
+                            <p class="career-role">Estagiário</p>
+                            <p>Apoio à análise de dados e à melhoria de processos, com desenvolvimento de indicadores, dashboards e soluções de apoio à tomada de decisão.</p>
+                            <ul class="tech-tags"><li>Power BI</li><li>DAX</li><li>Excel</li><li>Análise de Dados</li></ul>
+                        </div>
+                        <span class="career-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </article>
+
+                <article class="career-card">
+                    <a href="https://ktech.mobi/" target="_blank" rel="noopener noreferrer" class="career-card__link">
+                        <div class="career-brand career-brand--ktech" aria-label="Ktech">
+                            <span class="ktech-mark" aria-hidden="true">K</span>
+                            <strong>KTECH</strong><small>Kambô Tecnologia</small>
+                        </div>
+                        <div class="career-card__body">
+                            <div class="career-meta"><span class="career-period">ago. 2025 — ago. 2026</span><span class="career-type">Estágio</span></div>
+                            <h3>Ktech</h3>
+                            <p class="career-role">Estagiário</p>
+                            <p>Atuação com Business Intelligence e análise de dados, contribuindo na criação e manutenção de dashboards, tratamento de informações e automação de análises e relatórios.</p>
+                            <ul class="tech-tags"><li>Power BI</li><li>DAX</li><li>Excel</li><li>Python</li></ul>
+                        </div>
+                        <span class="career-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </article>
+
+                <article class="career-card">
+                    <a href="https://see.ac.gov.br/" target="_blank" rel="noopener noreferrer" class="career-card__link">
+                        <div class="career-brand career-brand--see" aria-label="Secretaria de Estado de Educação do Acre">
+                            <span class="see-mark" aria-hidden="true">AC</span>
+                            <strong>SEE</strong><small>Governo do Acre</small>
+                        </div>
+                        <div class="career-card__body">
+                            <div class="career-meta"><span class="career-period">set. 2024 — dez. 2024</span><span class="career-type">Estágio</span></div>
+                            <h3>Secretaria de Estado de Educação e Cultura — SEE/AC</h3>
+                            <p class="career-role">Estagiário • Tecnologia da Informação</p>
+                            <p>Apoio ao acompanhamento de testes de programas, instalação e suporte a redes, computadores, softwares e comunicação de dados, além de suporte técnico aos usuários.</p>
+                            <ul class="tech-tags"><li>Suporte Técnico</li><li>Redes</li><li>Software</li><li>Infraestrutura</li></ul>
+                        </div>
+                        <span class="career-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="career-section" aria-labelledby="formacao-title">
+            <div class="section-heading">
+                <p class="eyebrow">FORMAÇÃO PRÁTICA</p>
+                <h2 id="formacao-title">Formação &amp; Programas</h2>
+            </div>
+            <div class="career-grid career-grid--secondary">
+                <article class="career-compact-card">
+                    <a href="https://ifac.si/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/spi.png" alt="Sistemas para Internet no IFAC" loading="lazy" decoding="async">
+                        <div><h3>Sistemas para Internet — IFAC</h3><p>Graduação focada em desenvolvimento de aplicações para a web, programação, banco de dados e construção de sistemas.</p></div>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+                <article class="career-compact-card">
+                    <a href="http://webacademy.ufac.br/index.php#sobre" target="_blank" rel="noopener noreferrer">
+                        <img src="img/webAcademy.png" alt="WebAcademy UFAC" loading="lazy" decoding="async">
+                        <div><h3>WebAcademy — UFAC</h3><p>Capacitação full stack com experiência prática em desenvolvimento em equipe e construção de sistemas reais.</p></div>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+                <article class="career-compact-card">
+                    <a href="https://integra.ifac.edu.br/ecossistema/laboratorios/ifmaker-rio-branco-campus-rio-branco-319" target="_blank" rel="noopener noreferrer">
+                        <img src="img/euProgramoRobos.png" alt="Eu Programo Robôs" loading="lazy" decoding="async">
+                        <div><h3>Eu Programo Robôs</h3><p>Experiência formativa ligada à tecnologia, programação e aplicação prática de conceitos de computação.</p></div>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section class="career-section" aria-labelledby="lideranca-title">
+            <div class="section-heading">
+                <p class="eyebrow">ALÉM DO CÓDIGO</p>
+                <h2 id="lideranca-title">Liderança &amp; Voluntariado</h2>
+            </div>
+            <article class="leadership-card">
+                <a href="https://www.escoteiros.org.br" target="_blank" rel="noopener noreferrer">
+                    <div class="leadership-card__image"><img src="img/escoteiros-logo.png" alt="Escoteiros do Brasil" loading="lazy" decoding="async"></div>
+                    <div class="leadership-card__content">
+                        <span class="career-type">Movimento Escoteiro</span>
+                        <h3>4º Grupo Escoteiro Leôncio de Carvalho</h3>
+                        <p>Trajetória de aproximadamente oito anos no Movimento Escoteiro, atualmente no Clã Pioneiro Estrela Altaneira. A experiência contribuiu para liderança, organização, responsabilidade, trabalho em equipe e serviço à comunidade.</p>
+                        <p class="leadership-highlight">Presidente da COMAD em 2024 • Vice-presidente em 2025 e 2026</p>
+                    </div>
+                    <span class="career-arrow" aria-hidden="true">↗</span>
+                </a>
+            </article>
+        </section>
     </main>
 
     <footer class="site-footer">
         <nav aria-label="Redes sociais e contato">
             <button type="button" class="footer-link hovering" data-copy-email>email</button>
             <a class="footer-link hovering" href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer">github</a>
-            <a class="footer-link hovering" href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">linkedin</a>
+            <a class="footer-link hovering" href="https://www.linkedin.com/in/vb-melo/" target="_blank" rel="noopener noreferrer">linkedin</a>
             <a class="footer-link hovering" href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer">instagram</a>
         </nav>
     </footer>

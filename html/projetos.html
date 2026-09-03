@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="icon" href="img/logo-vb-icon.svg">
+    <script src="../js/app.js" defer></script>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ux.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08070b">
+    <title>Projetos</title>
+</head>
+<body data-page="internal">
+    <header id="navbar">
+        <div id="logo">
+            <a href="sobremim.html" aria-label="Ir para Sobre mim">
+                <img src="img/Vimeo.svg" alt="Vimeo logo">
+            </a>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Navegação principal">
+            <ul id="primary-navigation">
+                <li class="hovering"><a href="switch-home.html">HOME</a></li>
+                <li class="hovering"><a href="sobremim.html">SOBRE</a></li>
+                <li class="hovering"><a href="skills.html">SKILLS</a></li>
+                <li class="hovering"><a href="projetos.html">PROJETOS</a></li>
+                <li class="hovering"><a href="experiencias.html">EXPERIÊNCIAS</a></li>
+                <li class="hovering"><a href="comunicacao.html">COMUNICAÇÃO</a></li>
+                <li class="hovering"><a href="../content/curriculo-vinicius-barros.pdf" download="curriculo-vinicius-barros.pdf" target="_blank" rel="noopener noreferrer">CURRICULUM VITAE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="projects-page">
+        <header class="page-intro">
+            <p class="eyebrow">PORTFÓLIO DE DESENVOLVIMENTO</p>
+            <h1>Projetos</h1>
+            <p class="page-intro__text">Uma seleção de projetos que representam meu trabalho com desenvolvimento web, mobile, modelagem de dados e construção de soluções para problemas reais.</p>
+        </header>
+
+        <section class="projects-grid" aria-label="Projetos em destaque">
+            <article class="project-card project-card--featured">
+                <div class="project-cover project-cover--napne" aria-hidden="true">
+                    <span class="project-cover__kicker">TCC • SISTEMA WEB</span>
+                    <strong>NAPNE 360</strong>
+                    <span class="project-cover__symbol">360°</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-status">Em desenvolvimento</span>
+                        <span>Projeto acadêmico</span>
+                    </div>
+                    <h2>NAPNE 360</h2>
+                    <p>Sistema proposto para centralizar o acompanhamento educacional inclusivo do NAPNE, reduzindo processos manuais e organizando informações, relatórios, alertas e histórico dos estudantes em uma única solução.</p>
+                    <p class="project-role"><strong>Minha participação:</strong> concepção da solução, levantamento de requisitos, modelagem dos dados e definição dos fluxos de acompanhamento.</p>
+                    <ul class="tech-tags" aria-label="Tecnologias e competências do NAPNE 360">
+                        <li>SQL</li><li>Modelagem de Dados</li><li>Análise de Requisitos</li><li>Sistema Web</li><li>Acessibilidade</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a href="https://github.com/vbmelo-hub/Napne-360" target="_blank" rel="noopener noreferrer">Código no GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-cover project-cover--grimorio" aria-hidden="true">
+                    <span class="project-cover__kicker">WEB + ANDROID</span>
+                    <strong>Grimório 20</strong>
+                    <span class="project-cover__symbol">✦</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta"><span class="project-status">Em evolução</span><span>Projeto pessoal</span></div>
+                    <h2>Grimório 20</h2>
+                    <p>Aplicação para consulta e organização de magias de Tormenta 20, com catálogo local, busca, filtros e armazenamento no dispositivo. O projeto também possui uma camada Android em Java com WebView.</p>
+                    <ul class="tech-tags" aria-label="Tecnologias do Grimório 20">
+                        <li>React Native</li><li>Expo</li><li>JavaScript</li><li>AsyncStorage</li><li>Java</li><li>WebView</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a href="https://github.com/vbmelo-hub/Projeto-T20" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a>
+                        <a class="project-action--primary" href="https://vbmelo-hub.github.io/Projeto-T20/" target="_blank" rel="noopener noreferrer">Abrir aplicação <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-cover project-cover--commerce" aria-hidden="true">
+                    <span class="project-cover__kicker">BACK-END / WEB</span>
+                    <strong>Comércio Eletrônico</strong>
+                    <span class="project-cover__symbol">{ }</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta"><span class="project-status project-status--neutral">Acadêmico</span><span>Desenvolvimento Web</span></div>
+                    <h2>Comércio Eletrônico N2</h2>
+                    <p>Aplicação acadêmica de comércio eletrônico para petshop, com catálogo, autenticação, carrinho, pedidos e painel administrativo, estruturada com front-end e API REST.</p>
+                    <ul class="tech-tags" aria-label="Tecnologias do projeto Comércio Eletrônico">
+                        <li>Java</li><li>Spring Boot</li><li>Angular</li><li>MySQL</li><li>Maven</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a href="https://github.com/vbmelo-hub/comercio-eletronico-N2" target="_blank" rel="noopener noreferrer">Código no GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-cover project-cover--portfolio" aria-hidden="true">
+                    <span class="project-cover__kicker">FRONT-END</span>
+                    <strong>Portfólio</strong>
+                    <span class="project-cover__symbol">◫</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta"><span class="project-status">Em evolução</span><span>Projeto pessoal</span></div>
+                    <h2>Portfólio Pessoal</h2>
+                    <p>Este próprio portfólio: uma experiência visual inspirada no Nintendo Switch, construída com HTML, CSS e JavaScript puro, com responsividade, microinterações e navegação pensada para desktop e mobile.</p>
+                    <ul class="tech-tags" aria-label="Tecnologias do portfólio">
+                        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li><li>UX Responsiva</li>
+                    </ul>
+                    <div class="project-actions">
+                        <a href="https://github.com/vbmelo-hub/portifolio" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a>
+                        <a class="project-action--primary" href="https://vbmelo-hub.github.io/portifolio/" target="_blank" rel="noopener noreferrer">Ver online <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="projects-more" aria-label="Mais projetos no GitHub">
+            <div>
+                <p class="eyebrow">MAIS CÓDIGO</p>
+                <h2>Outros projetos e estudos</h2>
+                <p>Meu GitHub reúne exercícios, experimentos e outros projetos acadêmicos. Aqui destaquei apenas os que melhor representam meu momento atual.</p>
+            </div>
+            <a href="https://github.com/vbmelo-hub?tab=repositories" target="_blank" rel="noopener noreferrer">Ver todos os repositórios <span aria-hidden="true">↗</span></a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <nav aria-label="Redes sociais e contato">
+            <button type="button" class="footer-link hovering" data-copy-email>email</button>
+            <a class="footer-link hovering" href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer">github</a>
+            <a class="footer-link hovering" href="https://www.linkedin.com/in/vb-melo/" target="_blank" rel="noopener noreferrer">linkedin</a>
+            <a class="footer-link hovering" href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer">instagram</a>
+        </nav>
+    </footer>
+</body>
+</html>
