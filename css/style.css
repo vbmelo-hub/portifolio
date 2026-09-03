@@ -1,117 +1,182 @@
-/* ====================================================== SOBRE MIM ====================================================== */
+/* ====================================================== GERAL ====================================================== */
+main {
+    padding-inline: clamp(18px, 4vw, 64px);
+}
+
 h1 {
-    padding-left: 12vh;
-    font-size: 5vh;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1.18vh;
+    width: min(100%, 1680px);
+    margin-inline: auto;
+    padding: clamp(16px, 2vh, 28px) 0 0 clamp(0px, 4vw, 72px);
     background: linear-gradient(90deg, #9E46A6 0%, #FAC3FF 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: clamp(0.08rem, 0.65vw, 0.7rem);
 }
 
-div.paragrafos {
-    width: 66.39vh;
-    color: #FFF;
-    font-size: 2.2vh;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    letter-spacing: 0.16vh;
-    padding-top: 7vh;
-    justify-self: left;
-}
-
-div.paragrafos p{
-    padding-bottom: 4.93vh;
-}
-
-div#sobremim {
+/* ====================================================== SOBRE MIM ====================================================== */
+#sobremim {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(240px, 0.78fr) repeat(2, minmax(280px, 1fr));
+    align-items: start;
+    gap: clamp(28px, 4vw, 72px);
+    width: min(100%, 1680px);
+    margin: 0 auto;
+    padding: clamp(34px, 5vh, 58px) 0 clamp(24px, 4vh, 52px);
 }
 
-div#sobremim img {
-    margin-left: 5vh;
-    padding-top: 5vh;
-    height: 50vh;
+#sobremim > img {
+    display: block;
+    width: min(100%, 468px);
+    height: auto;
     justify-self: center;
+    border-radius: 2px;
 }
 
-/* ============================================================================================================ */
+.paragrafos {
+    width: 100%;
+    max-width: 650px;
+    color: #FFF;
+    font-size: clamp(1rem, 1.25vw, 1.35rem);
+    font-weight: 300;
+    line-height: 1.62;
+    letter-spacing: clamp(0.01rem, 0.08vw, 0.08rem);
+}
 
-
-
-
-
+.paragrafos p + p {
+    margin-top: clamp(22px, 3vh, 38px);
+}
 
 /* ====================================================== SKILLS ====================================================== */
+.skills-section {
+    width: min(100%, 1480px);
+    margin: 0 auto;
+    padding: clamp(28px, 4vh, 42px) 0 clamp(36px, 6vh, 74px);
+}
 
-div.linguagens {
+.skills-group + .skills-group {
+    margin-top: clamp(34px, 5vh, 58px);
+}
+
+.skills-group h2 {
+    margin: 0 0 clamp(20px, 3vh, 32px);
+    color: #FFF;
+    font-size: clamp(1.28rem, 2vw, 1.85rem);
+    font-weight: 600;
+    text-align: center;
+}
+
+.skills-grid {
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: clamp(16px, 2.4vw, 28px);
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-top: 9vh;
+    gap: 14px;
+    min-height: 172px;
+    padding: 20px 16px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    transition: transform 200ms ease, border-color 180ms ease, box-shadow 200ms ease, background-color 180ms ease;
 }
 
-div.linguagens img {
-    height: 20vh;
+.skill-card img {
+    display: block;
+    width: min(92px, 100%);
+    height: 92px;
+    object-fit: contain;
 }
 
-/* ============================================================================================================ */
+.skill-card span {
+    display: block;
+    max-width: 100%;
+    background: linear-gradient(90deg, #9E46A6 0%, #FAC3FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(0.9rem, 1.25vw, 1.12rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: clamp(0.03rem, 0.15vw, 0.08rem);
+    text-align: center;
+    text-wrap: balance;
+}
 
+.skill-card:focus-visible {
+    outline: 3px solid #FAC3FF;
+    outline-offset: 4px;
+}
 
+@media (hover: hover) and (pointer: fine) {
+    .skill-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(250, 195, 255, 0.24);
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22);
+    }
+}
 
-
-
+.skill-card:active {
+    transform: scale(0.97);
+}
 
 /* ====================================================== EXPERIÊNCIAS ====================================================== */
-div.experiencias {
+.experiencias {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-self: center;
-    margin-top: 9vh;
-    margin-top: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: clamp(24px, 3.5vw, 58px);
+    width: min(100%, 1520px);
+    margin: clamp(28px, 5vh, 56px) auto clamp(32px, 6vh, 72px);
 }
 
-div.experiencias img {
-    height: 35vh;
-    padding-left: 4vh;
+.experiencias a {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-width: 0;
+    border-radius: 10px;
 }
 
-div#webAcademy {
-    justify-self: center;
-    margin-top: 4vh;
+.experiencias img {
+    display: block;
+    width: min(100%, 488px);
+    height: auto;
+    object-fit: contain;
 }
 
-div#webAcademy img {
-    padding-left: 4vh;
-       height: 35vh;
+.webacademy-card {
+    grid-column: 2;
 }
-/* ============================================================================================================ */
 
-
-
-
-
+.experiencias a:focus-visible {
+    outline: 3px solid #FAC3FF;
+    outline-offset: 5px;
+}
 
 /* ====================================================== COMUNICAÇÃO ====================================================== */
-
 .test {
-    text-align: center;
+    padding: clamp(18px, 3vh, 34px) 1rem 1rem;
     color: white;
-    padding: 1rem;
+    text-align: center;
 }
 
 form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
+    width: min(100%, 500px);
+    margin: 0 auto clamp(34px, 6vh, 72px);
+    padding: clamp(16px, 4vw, 24px);
     border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
+    border-radius: 7px;
 }
 
 label {
@@ -124,26 +189,414 @@ input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    min-height: 44px;
+    margin-bottom: 12px;
+    padding: 10px 11px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    font: inherit;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 .button-enviar {
-    justify-self: center;
+    display: flex;
+    justify-content: center;
 }
 
-button {
-    background-color: #7b2e82;
-    color: white;
-    padding: 10px 15px;
+.button-enviar button {
+    min-height: 44px;
     border: none;
     border-radius: 4px;
+    background-color: #7b2e82;
+    padding: 10px 16px;
+    color: white;
     cursor: pointer;
+    transition: background-color 180ms ease, transform 180ms ease;
 }
 
-button:hover {
-    background-color: #b343bd;
+input:focus-visible,
+textarea:focus-visible,
+.button-enviar button:focus-visible {
+    outline: 3px solid #FAC3FF;
+    outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .button-enviar button:hover {
+        background-color: #b343bd;
+        transform: translateY(-1px);
+    }
+}
+
+/* Tablet: Sobre progride para duas colunas; experiências passam a duas. */
+@media (max-width: 1100px) {
+    #sobremim {
+        grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.4fr);
+        gap: 32px clamp(28px, 5vw, 54px);
+    }
+
+    #sobremim .paragrafos:last-child {
+        grid-column: 1 / -1;
+        max-width: 900px;
+        justify-self: center;
+    }
+
+    .experiencias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: min(100%, 980px);
+    }
+
+    .webacademy-card {
+        grid-column: auto;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    main {
+        padding-inline: 18px;
+    }
+
+    h1 {
+        padding: 18px 0 0;
+        font-size: clamp(1.75rem, 8vw, 2.45rem);
+        letter-spacing: clamp(0.05rem, 0.8vw, 0.2rem);
+        text-align: center;
+    }
+
+    #sobremim {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-top: 30px;
+    }
+
+    #sobremim > img {
+        width: min(84vw, 360px);
+    }
+
+    .paragrafos,
+    #sobremim .paragrafos:last-child {
+        grid-column: auto;
+        max-width: 620px;
+        justify-self: center;
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .paragrafos p + p {
+        margin-top: 22px;
+    }
+
+    .skills-section {
+        padding-top: 20px;
+    }
+
+    .skills-group + .skills-group {
+        margin-top: 32px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .skill-card {
+        min-height: 144px;
+        padding: 16px 10px;
+        border-radius: 20px;
+    }
+
+    .skill-card img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .skill-card span {
+        font-size: 0.84rem;
+        letter-spacing: 0.02rem;
+    }
+
+    .experiencias {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        width: min(100%, 520px);
+        margin-top: 30px;
+    }
+
+    .experiencias img {
+        width: min(100%, 460px);
+    }
+
+    form {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    main {
+        padding-inline: 14px;
+    }
+
+    form {
+        padding: 14px;
+    }
+}
+
+/* ====================================================== UX / REFINAMENTO DAS PÁGINAS INTERNAS ====================================================== */
+#sobremim > img {
+    border: 1px solid rgba(250, 195, 255, 0.18);
+    box-shadow:
+        0 22px 60px rgba(0, 0, 0, 0.34),
+        0 0 0 1px rgba(158, 70, 166, 0.08);
+    transition: transform var(--ux-normal, 240ms) var(--ux-ease, ease-out), box-shadow var(--ux-normal, 240ms) ease;
+}
+
+.skill-card img {
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.18));
+    transition: transform var(--ux-normal, 240ms) var(--ux-ease, ease-out), filter var(--ux-normal, 240ms) ease;
+}
+
+.skill-card:active img {
+    transform: scale(0.985);
+}
+
+.experiencias a {
+    position: relative;
+    padding: 8px;
+    border: 1px solid transparent;
+    transition:
+        transform var(--ux-fast, 150ms) var(--ux-ease, ease-out),
+        border-color var(--ux-fast, 150ms) ease,
+        background-color var(--ux-fast, 150ms) ease,
+        box-shadow var(--ux-normal, 240ms) ease;
+}
+
+.experiencias a::after {
+    content: "↗";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(250, 195, 255, 0.22);
+    border-radius: 10px;
+    background: rgba(8, 7, 11, 0.72);
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity var(--ux-fast, 150ms) ease, transform var(--ux-fast, 150ms) var(--ux-ease, ease-out);
+    pointer-events: none;
+    backdrop-filter: blur(7px);
+}
+
+.experiencias a:active {
+    border-color: rgba(250, 195, 255, 0.28);
+    background: rgba(250, 195, 255, 0.04);
+    transform: scale(0.975);
+}
+
+.experiencias a:active::after {
+    opacity: 1;
+    transform: translate(1px, -1px);
+}
+
+.test {
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: clamp(10px, 2vh, 18px);
+    border: 1px solid rgba(250, 195, 255, 0.2);
+    border-radius: 999px;
+    background: rgba(250, 195, 255, 0.045);
+    padding: 9px 14px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+}
+
+form {
+    border-color: rgba(250, 195, 255, 0.2);
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.018), rgba(255, 255, 255, 0.018)),
+        #0b090e;
+    box-shadow: 0 18px 56px rgba(0, 0, 0, 0.24);
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.form-field label {
+    margin-bottom: 7px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color var(--ux-fast, 150ms) ease;
+}
+
+.form-field:focus-within label {
+    color: #FAC3FF;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.045);
+    color: #fff;
+    caret-color: #FAC3FF;
+    transition:
+        border-color var(--ux-fast, 150ms) ease,
+        background-color var(--ux-fast, 150ms) ease,
+        box-shadow var(--ux-fast, 150ms) ease,
+        transform var(--ux-fast, 150ms) var(--ux-ease, ease-out);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.42);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: rgba(250, 195, 255, 0.72);
+    background: rgba(250, 195, 255, 0.055);
+    box-shadow: 0 0 0 4px rgba(158, 70, 166, 0.12);
+    outline: none;
+}
+
+input:user-invalid,
+textarea:user-invalid {
+    border-color: rgba(255, 124, 124, 0.68);
+}
+
+.button-enviar button {
+    position: relative;
+    min-width: 160px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7b2e82, #9E46A6);
+    box-shadow: 0 10px 24px rgba(123, 46, 130, 0.22);
+    font-weight: 600;
+    transition:
+        transform var(--ux-fast, 150ms) var(--ux-ease, ease-out),
+        filter var(--ux-fast, 150ms) ease,
+        box-shadow var(--ux-fast, 150ms) ease,
+        opacity var(--ux-fast, 150ms) ease;
+}
+
+.button-enviar button:active:not(:disabled) {
+    transform: translateY(1px) scale(0.965);
+    filter: brightness(0.94);
+    box-shadow: 0 5px 14px rgba(123, 46, 130, 0.18);
+}
+
+.button-enviar button:disabled {
+    opacity: 0.72;
+    cursor: progress;
+}
+
+form.is-submitting .button-enviar button::after {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-left: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #fff;
+    border-radius: 50%;
+    vertical-align: -2px;
+    animation: submitSpin 700ms linear infinite;
+}
+
+@keyframes submitSpin {
+    to { transform: rotate(360deg); }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #sobremim > img:hover {
+        transform: translateY(-3px);
+        box-shadow:
+            0 28px 70px rgba(0, 0, 0, 0.4),
+            0 0 0 1px rgba(250, 195, 255, 0.16);
+    }
+
+    .skill-card:hover img {
+        transform: translateY(-2px) scale(1.02);
+        filter: drop-shadow(0 18px 34px rgba(0, 0, 0, 0.25));
+    }
+
+    .experiencias a:hover {
+        border-color: rgba(250, 195, 255, 0.22);
+        background: rgba(250, 195, 255, 0.035);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+        transform: translateY(-3px);
+    }
+
+    .experiencias a:hover::after {
+        opacity: 1;
+        transform: translate(2px, -2px);
+    }
+
+    .button-enviar button:hover {
+        background: linear-gradient(135deg, #8d3594, #b34fbc);
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(123, 46, 130, 0.3);
+    }
+}
+
+@media (max-width: 700px) {
+    #sobremim > img {
+        border-radius: 14px;
+    }
+
+
+    .experiencias a {
+        padding: 6px;
+        border-radius: 14px;
+    }
+
+    .experiencias a::after {
+        top: 9px;
+        right: 9px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .test {
+        margin-top: 12px;
+        font-size: 0.72rem;
+    }
+
+    form {
+        border-radius: 14px;
+        box-shadow: 0 14px 42px rgba(0, 0, 0, 0.22);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        border-radius: 9px;
+        font-size: 16px; /* evita zoom automático do Safari iOS */
+    }
+
+    .button-enviar button {
+        width: 100%;
+        min-height: 50px;
+        border-radius: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    form.is-submitting .button-enviar button::after {
+        animation: none;
+        border-color: rgba(255, 255, 255, 0.65);
+    }
 }

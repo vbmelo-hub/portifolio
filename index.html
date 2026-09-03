@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="icon" href="html/img/switch.png">
     <link rel="stylesheet" href="css/switch.css">
+    <link rel="stylesheet" href="css/ux.css">
     <script src="js/app.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1f1f1f">
     <title>Switch</title>
 </head>
-    <body>
-        <div id="controll">
-            <div id="left_joycon">
-                <img id="menos" src="html/img/menos.png" alt="menos">
-                <img id="left_stick" src="html/img/left_stick.svg" alt="stick">
-                <img id="button_arrow" src="html/img/buttons_arrow_joycon.svg" alt="botões" onclick="tocarSom()">
-            </div>
-            <div id="profile">
-                <img id="mario" src="html/img/mario.png" alt="Mario">
-                <h1 class="noto-sans">Seja Bem Vindo(a)!</h1>
-                <p>Pressione qualquer botão do teclado para continuar...</p>
-                <div class="redes">
-                    <a href="https://github.com/vbmelo-hub" target="_blank">
-                        <img src="html/img/Github.svg" alt="Github">
-                    </a>
-                    <a href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                        <img src="html/img/Linkedin.svg" alt="Linkedin">
-                    </a>
-                    <a href="https://www.instagram.com/vinixius_ba/" target="_blank">
-                        <img src="html/img/Instagram.svg" alt="instagram">
-                    </a>
-                        <img src="html/img/Discord.svg" alt="Discord" onclick="copiarTexto()" style="cursor: pointer;">
-                </div>
-            </div>
-            <div id="right_joycon">
-                <img id="mais" src="html/img/+.svg" alt="mais">
-                <img id="button_joycon" src="html/img/buttons_joycon.png" alt="botões" onclick="tocarSom()">
-                <img id="right_stick" src="html/img/left_stick.svg" alt="right stick">
-                <img id="home" src="html/img/Home.png" alt="Home" onclick="tocarSom()">
-            </div>
-        </div>
-    </body>
+<body data-page="landing">
+    <main id="controll">
+        <section id="left_joycon" aria-label="Joy-Con esquerdo">
+            <img id="menos" src="html/img/menos.png" alt="" aria-hidden="true">
+            <img id="left_stick" src="html/img/left_stick.svg" alt="" aria-hidden="true">
+            <button class="joycon-button joycon-button-arrows" type="button" data-switch-sound aria-label="Tocar som do Joy-Con esquerdo">
+                <img id="button_arrow" src="html/img/buttons_arrow_joycon.svg" alt="">
+            </button>
+        </section>
+
+        <section id="profile" aria-labelledby="welcome-title">
+            <img id="mario" src="html/img/mario.png" alt="Mario">
+            <h1 id="welcome-title" class="noto-sans">Seja Bem Vindo(a)!</h1>
+            <button id="continueButton" class="continue-button" type="button">
+                <span id="continueInstruction">Pressione qualquer botão do teclado para continuar...</span>
+            </button>
+            <nav class="redes" aria-label="Redes sociais">
+                <a href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <img src="html/img/Github.svg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img src="html/img/Linkedin.svg" alt="">
+                </a>
+                <a href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="html/img/Instagram.svg" alt="">
+                </a>
+                <button class="social-button" type="button" data-copy-discord aria-label="Copiar usuário do Discord">
+                    <img src="html/img/Discord.svg" alt="">
+                </button>
+            </nav>
+        </section>
+
+        <section id="right_joycon" aria-label="Joy-Con direito">
+            <img id="mais" src="html/img/+.svg" alt="" aria-hidden="true">
+            <button class="joycon-button joycon-button-actions" type="button" data-switch-sound aria-label="Tocar som do Joy-Con direito">
+                <img id="button_joycon" src="html/img/buttons_joycon.png" alt="">
+            </button>
+            <img id="right_stick" src="html/img/left_stick.svg" alt="" aria-hidden="true">
+            <button class="joycon-button joycon-button-home" type="button" data-switch-sound aria-label="Tocar som do botão Home">
+                <img id="home" src="html/img/Home.png" alt="">
+            </button>
+        </section>
+    </main>
+</body>
 </html>

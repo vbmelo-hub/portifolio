@@ -1,103 +1,502 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 * {
     margin: 0;
-    font-family: "Noto Sans", sans-serif;
+}
+
+html,
+body {
+    min-height: 100%;
 }
 
 body {
+    min-width: 320px;
     background-color: #D3D3D3;
-}
-
-/* NAVBAR */
-
-header#navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 4vh;
-    align-items: center;
-}
-
-div#logo {
-    display: flex;
-}
-
-div#logo img {
-    height: 10.15vh;
-}
-
-div#logo p {
-    align-self: center;
-    padding-left: 4.8vh;
     color: #1E1E1E;
-    font-size: 3vh;
-    font-style: normal;
+    font-family: "Noto Sans", sans-serif;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* CABEÇALHO */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    padding: clamp(20px, 4vh, 44px) clamp(20px, 4vw, 64px);
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+#logo img {
+    flex: 0 0 auto;
+    width: clamp(64px, 10.15vh, 110px);
+    height: clamp(64px, 10.15vh, 110px);
+    object-fit: contain;
+}
+
+#logo p {
+    min-width: 0;
+    padding-left: clamp(14px, 3vw, 52px);
+    color: #1E1E1E;
+    font-size: clamp(1.15rem, 3vh, 2rem);
     font-weight: 300;
-    line-height: normal;
-    letter-spacing: 0.39vh;
+    line-height: 1.2;
+    letter-spacing: clamp(0.03rem, 0.39vh, 0.24rem);
 }
 
-div#wifibateria img{
-    height: 6.44vh;
-    padding-right: 5.07vh;
+#wifibateria {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    gap: clamp(12px, 2.5vw, 44px);
 }
 
-/* PRINCIPAL */
+#wifibateria img {
+    width: auto;
+    height: clamp(34px, 6.44vh, 70px);
+}
 
-nav#navegacao {
+/* MENU PRINCIPAL */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(18px, 4vh, 48px) clamp(16px, 3vw, 48px) clamp(28px, 5vh, 60px);
+}
+
+#navegacao {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-items: center;
-    margin-top: 10vh;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(14px, 2.4vw, 42px);
+    width: min(100%, 1660px);
+    margin-top: clamp(18px, 4vh, 52px);
 }
 
-nav#navegacao img {
-    height: 45vh;
-    transition: opacity 200ms ease-in-out;
-}
-
-nav#navegacao .imagem-topo:hover {
-    opacity: 0;
+#navegacao > a {
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    border-radius: 7%;
 }
 
 .container-imagem {
-  position: relative;
-  width: 45vh; 
-  height: 45vh; 
-  cursor: pointer; 
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1;
+    border-radius: 7%;
+    cursor: pointer;
 }
 
 .container-imagem img {
-  position: absolute; 
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: inherit;
 }
 
 .imagem-topo {
     z-index: 1;
 }
 
+.imagem-base {
+    z-index: 0;
+}
 
-div#redes {
-    width: 129.49vh;
-    height: 13.71vh;
-    border-radius: 50px;
+/* BARRA INFERIOR */
+#redes {
+    width: min(944px, 100%);
+    min-height: clamp(86px, 13.71vh, 148px);
+    margin-top: clamp(34px, 7vh, 76px);
+    padding: clamp(12px, 1.8vh, 22px) clamp(16px, 3vw, 38px);
+    border-radius: clamp(24px, 3.5vw, 50px);
     background: #FFF;
-    margin-top: 7vh;
-    justify-self: center;
-    align-content: center;
-    text-align: center;
 }
 
-div#redes-icons {
+#redes-icons {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, minmax(44px, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: clamp(6px, 1vw, 16px);
+    width: 100%;
+    height: 100%;
 }
 
-div#redes-icons img {
-    justify-self: center;
-    height: 10.01vh;
-    transition: transform 200ms ease-in-out;
+#redes-icons a,
+.switch-social-button {
+    display: grid;
+    place-items: center;
+    width: clamp(52px, 7vw, 88px);
+    height: clamp(52px, 7vw, 88px);
+    border: 0;
+    border-radius: 18px;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
 }
 
-div#redes-icons img:hover {
-    transform: scale(1.05);
+#redes-icons img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#navegacao > a:focus-visible,
+#redes-icons a:focus-visible,
+.switch-social-button:focus-visible {
+    outline: 4px solid #1E1E1E;
+    outline-offset: 5px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #navegacao .imagem-topo {
+        transition: opacity 200ms ease-in-out;
+    }
+
+    #navegacao > a:hover .imagem-topo,
+    #navegacao > a:focus-visible .imagem-topo {
+        opacity: 0;
+    }
+
+    #redes-icons a,
+    .switch-social-button {
+        transition: transform 200ms ease-in-out;
+    }
+
+    #redes-icons a:hover,
+    .switch-social-button:hover {
+        transform: scale(1.06);
+    }
+}
+
+/* Tablets: dois cards por linha. */
+@media (max-width: 1099px) {
+    #navegacao {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: min(100%, 760px);
+    }
+
+    .container-imagem {
+        max-width: 340px;
+        justify-self: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    #navbar {
+        align-items: center;
+        gap: 10px;
+        padding: 18px 16px 8px;
+    }
+
+    #logo img {
+        width: 52px;
+        height: 52px;
+    }
+
+    #logo p {
+        max-width: 190px;
+        padding-left: 10px;
+        font-size: clamp(0.88rem, 4vw, 1.05rem);
+        letter-spacing: 0.01rem;
+    }
+
+    #wifibateria {
+        gap: 8px;
+    }
+
+    #wifibateria img {
+        height: clamp(24px, 7vw, 32px);
+    }
+
+    main {
+        padding: 18px 14px 30px;
+    }
+
+    #navegacao {
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .container-imagem {
+        max-width: 210px;
+    }
+
+    #redes {
+        min-height: 0;
+        margin-top: 28px;
+        padding: 10px 12px;
+        border-radius: 26px;
+    }
+
+    #redes-icons {
+        grid-template-columns: repeat(6, minmax(40px, 1fr));
+        gap: 2px;
+    }
+
+    #redes-icons a,
+    .switch-social-button {
+        width: clamp(44px, 13vw, 56px);
+        height: clamp(44px, 13vw, 56px);
+        border-radius: 12px;
+    }
+}
+
+/* Em 320-359px, seis ícones continuam em uma linha sem ultrapassar a barra. */
+@media (max-width: 359px) {
+    #logo p {
+        max-width: 150px;
+        font-size: 0.8rem;
+    }
+
+    #wifibateria img {
+        height: 22px;
+    }
+
+    #redes {
+        padding-inline: 8px;
+    }
+
+    #redes-icons {
+        grid-template-columns: repeat(6, minmax(38px, 1fr));
+    }
+
+    #redes-icons a,
+    .switch-social-button {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Landscape baixo: mantém quatro cards quando a largura permite. */
+@media (max-height: 600px) and (orientation: landscape) and (min-width: 900px) {
+    #navbar {
+        padding-block: 14px;
+    }
+
+    #logo img {
+        width: 54px;
+        height: 54px;
+    }
+
+    #logo p {
+        font-size: 1.05rem;
+    }
+
+    #wifibateria img {
+        height: 30px;
+    }
+
+    main {
+        padding-top: 6px;
+    }
+
+    #navegacao {
+        margin-top: 6px;
+    }
+
+    #redes {
+        margin-top: 18px;
+        min-height: 72px;
+        padding-block: 8px;
+    }
+
+    #redes-icons a,
+    .switch-social-button {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* ====================================================== UX / EXPERIÊNCIA DE CONSOLE ====================================================== */
+.switch-header,
+#navegacao > a,
+#redes {
+    transition:
+        opacity var(--ux-enter, 420ms) ease,
+        transform var(--ux-enter, 420ms) var(--ux-ease, ease-out);
+}
+
+.js body[data-page="switch-home"]:not(.ux-ready) .switch-header {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.js body[data-page="switch-home"]:not(.ux-ready) #navegacao > a {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+}
+
+.js body[data-page="switch-home"].ux-ready #navegacao > a {
+    transition-delay: calc(60ms + (var(--stagger-index, 0) * 55ms));
+}
+
+.js body[data-page="switch-home"]:not(.ux-ready) #redes {
+    opacity: 0;
+    transform: translateY(12px);
+}
+
+.js body[data-page="switch-home"].ux-ready #redes {
+    transition-delay: 210ms;
+}
+
+#navegacao > a {
+    position: relative;
+    touch-action: manipulation;
+    transition:
+        opacity var(--ux-enter, 420ms) ease,
+        transform var(--ux-fast, 150ms) var(--ux-ease, ease-out),
+        filter var(--ux-fast, 150ms) ease;
+}
+
+.container-imagem {
+    isolation: isolate;
+    transition:
+        box-shadow var(--ux-normal, 240ms) var(--ux-ease, ease-out),
+        transform var(--ux-fast, 150ms) var(--ux-ease, ease-out);
+}
+
+.container-imagem::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    inset: -5px;
+    border: 3px solid rgba(30, 30, 30, 0.82);
+    border-radius: calc(7% + 4px);
+    opacity: 0;
+    transform: scale(0.985);
+    transition: opacity var(--ux-fast, 150ms) ease, transform var(--ux-fast, 150ms) var(--ux-ease, ease-out);
+    pointer-events: none;
+}
+
+#navegacao > a:active,
+#navegacao > a.is-pressed {
+    transform: scale(0.965);
+    filter: brightness(0.96);
+}
+
+#navegacao > a:active .container-imagem,
+#navegacao > a.is-pressed .container-imagem {
+    box-shadow: 0 8px 18px rgba(30, 30, 30, 0.14);
+}
+
+#navegacao > a:active .container-imagem::after,
+#navegacao > a.is-pressed .container-imagem::after,
+#navegacao > a:focus-visible .container-imagem::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#navegacao > a:active .imagem-topo,
+#navegacao > a.is-pressed .imagem-topo {
+    opacity: 0;
+}
+
+#redes {
+    box-shadow: 0 12px 34px rgba(30, 30, 30, 0.08);
+}
+
+#redes-icons a,
+.switch-social-button {
+    transition:
+        transform var(--ux-fast, 150ms) var(--ux-ease, ease-out),
+        background-color var(--ux-fast, 150ms) ease,
+        box-shadow var(--ux-fast, 150ms) ease;
+}
+
+#redes-icons a:active,
+.switch-social-button:active {
+    transform: scale(0.88);
+    background: rgba(30, 30, 30, 0.08);
+    box-shadow: inset 0 2px 4px rgba(30, 30, 30, 0.08);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    #navegacao > a:hover {
+        transform: translateY(-3px) scale(1.012);
+    }
+
+    #navegacao > a:hover .container-imagem {
+        box-shadow: 0 14px 30px rgba(30, 30, 30, 0.14);
+    }
+
+    #navegacao > a:hover .container-imagem::after {
+        opacity: 0.62;
+        transform: scale(1);
+    }
+
+    #redes-icons a:hover,
+    .switch-social-button:hover {
+        background: rgba(30, 30, 30, 0.055);
+        transform: translateY(-2px) scale(1.04);
+    }
+}
+
+@media (max-width: 640px) {
+    #navbar {
+        padding-top: max(18px, calc(var(--ux-safe-top, 0px) + 12px));
+        padding-left: max(16px, calc(var(--ux-safe-left, 0px) + 12px));
+        padding-right: max(16px, calc(var(--ux-safe-right, 0px) + 12px));
+    }
+
+    main {
+        padding-bottom: max(30px, calc(var(--ux-safe-bottom, 0px) + 22px));
+    }
+
+    #navegacao > a:active,
+    #navegacao > a.is-pressed {
+        transform: scale(0.95);
+    }
+
+    .container-imagem::after {
+        inset: -3px;
+        border-width: 2px;
+    }
+
+    #redes {
+        box-shadow: 0 10px 28px rgba(30, 30, 30, 0.1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js body[data-page="switch-home"]:not(.ux-ready) .switch-header,
+    .js body[data-page="switch-home"]:not(.ux-ready) #navegacao > a,
+    .js body[data-page="switch-home"]:not(.ux-ready) #redes {
+        opacity: 1;
+        transform: none;
+    }
 }

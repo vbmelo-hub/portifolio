@@ -1,69 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="icon" href="img/Vimeo.svg">
     <script src="../js/app.js" defer></script>
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ux.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08070b">
     <title>Skills</title>
-  </head>
-  <body>
+</head>
+<body data-page="internal">
     <header id="navbar">
-      <div id="logo">
-          <a href="sobremim.html">
-            <img src="img/Vimeo.svg" alt="Vimeo logo">
-        </a>
-      </div>
-      <ul>
-        <li class="hovering"><a href="switch-home.html">HOME</a></li>
-        <li class="hovering"><a href="sobremim.html">SOBRE</a></li>
-        <li class="hovering"><a href="skills.html" id="active">SKILLS</a></li>
-        <li class="hovering"><a href="experiencias.html">EXPERIÊNCIAS</a></li>
-        <li class="hovering"><a href="comunicacao.html">COMUNICAÇÃO</a></li>
-        <li class="hovering">
-          <a
-            href="../content/curriculo-vinicius-barros.pdf"
-            download="curriculo-vinicius-barros.pdf"
-            target="_blank"
-            >CURRICULUM VITAE</a>
-        </li>
-      </ul>
-      <div class="nav-right"></div>
+        <div id="logo">
+            <a href="sobremim.html" aria-label="Ir para Sobre mim">
+                <img src="img/Vimeo.svg" alt="Vimeo logo">
+            </a>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Navegação principal">
+            <ul id="primary-navigation">
+                <li class="hovering"><a href="switch-home.html">HOME</a></li>
+                <li class="hovering"><a href="sobremim.html">SOBRE</a></li>
+                <li class="hovering"><a href="skills.html">SKILLS</a></li>
+                <li class="hovering"><a href="experiencias.html">EXPERIÊNCIAS</a></li>
+                <li class="hovering"><a href="comunicacao.html">COMUNICAÇÃO</a></li>
+                <li class="hovering"><a href="../content/curriculo-vinicius-barros.pdf" download="curriculo-vinicius-barros.pdf" target="_blank" rel="noopener noreferrer">CURRICULUM VITAE</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-      <div class="linguagens">
-        <img src="img/linguagens.png" alt="linguagens de programação">
-        <img src="img/FERRAMENTAS.png" alt="Ferramentas web">
-      </div>
+        <h1>Skills &amp; Ferramentas</h1>
+
+        <section class="skills-section" aria-label="Tecnologias e ferramentas que utilizo">
+            <section class="skills-group">
+                <h2>Linguagens</h2>
+                <div class="skills-grid">
+                    <article class="skill-card hovering"><img src="img/skills/html.png" alt="Logo HTML" decoding="async"><span>HTML</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/css.png" alt="Logo CSS" loading="lazy" decoding="async"><span>CSS</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/javascript.png" alt="Logo JavaScript" loading="lazy" decoding="async"><span>JAVASCRIPT</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/typescript.svg" alt="Logo TypeScript" loading="lazy" decoding="async"><span>TYPESCRIPT</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/python.png" alt="Logo Python" loading="lazy" decoding="async"><span>PYTHON</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/java.png" alt="Logo Java" loading="lazy" decoding="async"><span>JAVA</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/sql.svg" alt="Logo SQL" loading="lazy" decoding="async"><span>SQL</span></article>
+                </div>
+            </section>
+
+            <section class="skills-group">
+                <h2>Tecnologias &amp; Dados</h2>
+                <div class="skills-grid">
+                    <article class="skill-card hovering"><img src="img/skills/angular.svg" alt="Logo Angular" loading="lazy" decoding="async"><span>ANGULAR</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/springboot.svg" alt="Logo Spring Boot" loading="lazy" decoding="async"><span>SPRING BOOT</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/bootstrap.png" alt="Logo Bootstrap" loading="lazy" decoding="async"><span>BOOTSTRAP</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/powerbi.svg" alt="Logo Power BI" loading="lazy" decoding="async"><span>POWER BI</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/mysql.svg" alt="Logo MySQL" loading="lazy" decoding="async"><span>MYSQL</span></article>
+                </div>
+            </section>
+
+            <section class="skills-group">
+                <h2>Ferramentas</h2>
+                <div class="skills-grid">
+                    <article class="skill-card hovering"><img src="img/skills/trello.png" alt="Logo Trello" loading="lazy" decoding="async"><span>TRELLO</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/github.png" alt="Logo GitHub" loading="lazy" decoding="async"><span>GITHUB</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/git.png" alt="Logo Git" loading="lazy" decoding="async"><span>GIT</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/figma.png" alt="Logo Figma" loading="lazy" decoding="async"><span>FIGMA</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/docker.svg" alt="Logo Docker" loading="lazy" decoding="async"><span>DOCKER</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/maven.svg" alt="Logo Maven" loading="lazy" decoding="async"><span>MAVEN</span></article>
+                    <article class="skill-card hovering"><img src="img/skills/vscode.svg" alt="Logo Visual Studio Code" loading="lazy" decoding="async"><span>VS CODE</span></article>
+                </div>
+            </section>
+        </section>
     </main>
-  </body>
-  <table role="presentation">
-    <tr>
-      <td
-        class="hovering"
-        onclick="copiarEmail()"
-        tabindex="0"
-        onkeyup="handleKey(event)"
-      >
-        email
-      </td>
-      <td class="hovering">
-        <a href="https://github.com/vbmelo-hub" target="_blank">github</a>
-      </td>
-      <td class="hovering">
-        <a
-          href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          target="_blank"
-          >linkedin</a
-        >
-      </td>
-      <td class="hovering">
-        <a href="https://www.instagram.com/vinixius_ba/" target="_blank"
-          >instagram</a
-        >
-      </td>
-    </tr>
-  </table>
+
+    <footer class="site-footer">
+        <nav aria-label="Redes sociais e contato">
+            <button type="button" class="footer-link hovering" data-copy-email>email</button>
+            <a class="footer-link hovering" href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer">github</a>
+            <a class="footer-link hovering" href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">linkedin</a>
+            <a class="footer-link hovering" href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer">instagram</a>
+        </nav>
+    </footer>
+</body>
 </html>

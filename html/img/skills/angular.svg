@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Angular">
+  <path fill="#DD0031" d="M64 8 20 24l7 71 37 21 37-21 7-71L64 8Z"/>
+  <path fill="#C3002F" d="M64 8v108l37-21 7-71L64 8Z"/>
+  <path fill="#fff" d="M64 27 39 84h9.4l5-12.5h21.2l5 12.5H89L64 27Zm0 18.7 7.1 17.8H56.9L64 45.7Z"/>
+</svg>

@@ -1,146 +1,569 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
     margin: 0;
 }
 
-body{
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-width: 320px;
     background-color: #1F1F1F;
-}
-
-/* TELA INTEIRA  (JOYCON-LEFT, PROFILE E JOYCON-RIGHT) */
-div#controll{
-    display: grid;
-    grid-template-columns: 0.1fr 1fr 0.1fr;
-}
-
-
-/* JOYCON-LEFT */
-div#left_joycon{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    justify-content:  center;
-    background-color: #743636;
-    width: 38vh;
-    height: 100vh;
-}
-
-img#button_arrow {
-    margin-top: 15.08vh;
-    width: 26vh;
-    height: 26vh;
-    cursor: pointer;
-}
-
-img#left_stick{
-    justify-self: center;
-    margin-top: 12.34vh;
-    width: 19vh;
-    height: 19vh;
-    cursor: pointer;
-}
-
-img#menos {
-    justify-self: right;
-    margin-top: 6.58vh;
-    width: 5.5vh;
-    height: 1vh;
-    cursor: pointer;
-}
-
-
-/* JOYCON-RIGHT */
-div#right_joycon {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    justify-content: center;
-    background-color: #2F739E;
-    width: 38vh;
-    height: 100vh;
-}
-
-img#mais {
-    margin-top: 6.58vh;
-    width: 5.5vh;
-    height: 5.5vh;
-    cursor: pointer;
-}
-
-img#button_joycon {
-    margin-top: 8.23vh;
-    width: 26vh;
-    height: 26vh;
-    cursor: pointer;
-}
-
-.stick {
-  width: 60px;
-  height: 60px;
-  background: #666;
-  border-radius: 50%;
-  position: absolute;
-  top: 70px;
-  left: 70px;
-  transition: top 0.05s, left 0.05s;
-}
-
-img#right_stick {
-    justify-self: center;
-    margin-top: 12.34vh;
-    width: 19vh;
-    height: 19vh;
-    cursor: pointer;
-}
-
-img#home {
-    margin-top: 7.54vh;
-    width: 8.3vh;
-    height: 8.3vh;
-    cursor: pointer;
-}
-
-
-/* PROFILE */
-div#profile {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    place-items: center;
-    text-align: center;
     font-family: "Noto Sans", sans-serif;
 }
 
-img#mario {
-    width: 24.7vh;
-    height: 24.7vh;
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
-div#profile h1 {
+button {
+    font: inherit;
+}
+
+/* TELA INTEIRA (JOY-CON ESQUERDO, PERFIL E JOY-CON DIREITO) */
+#controll {
+    display: grid;
+    grid-template-columns: clamp(150px, 38vh, 410px) minmax(0, 1fr) clamp(150px, 38vh, 410px);
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+}
+
+#left_joycon,
+#right_joycon {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: start;
+    justify-items: center;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+}
+
+#left_joycon {
+    background-color: #743636;
+}
+
+#right_joycon {
+    background-color: #2F739E;
+}
+
+.joycon-button,
+.social-button,
+.continue-button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+.joycon-button {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+#menos {
+    width: clamp(28px, 5.5vh, 60px);
+    height: auto;
+    justify-self: end;
+    margin: clamp(28px, 6.58vh, 72px) 18% 0 0;
+}
+
+#left_stick,
+#right_stick {
+    width: clamp(92px, 19vh, 205px);
+    height: auto;
+    align-self: center;
+}
+
+.joycon-button-arrows {
+    align-self: center;
+    margin-top: 4vh;
+}
+
+#button_arrow,
+#button_joycon {
+    display: block;
+    width: clamp(120px, 26vh, 280px);
+    height: auto;
+}
+
+#mais {
+    width: clamp(28px, 5.5vh, 60px);
+    height: auto;
+    justify-self: start;
+    margin: clamp(28px, 6.58vh, 72px) 0 0 18%;
+}
+
+.joycon-button-actions {
+    align-self: center;
+}
+
+.joycon-button-home {
+    align-self: center;
+}
+
+#home {
+    display: block;
+    width: clamp(44px, 8.3vh, 90px);
+    height: auto;
+}
+
+/* PERFIL */
+#profile {
+    display: grid;
+    grid-template-rows: minmax(0, 1.15fr) auto auto minmax(0, 1fr);
+    place-items: center;
+    min-width: 0;
+    padding: clamp(24px, 4vh, 48px) clamp(18px, 4vw, 64px);
+    text-align: center;
+}
+
+#mario {
+    width: clamp(130px, 24.7vh, 267px);
+    height: auto;
+    align-self: end;
+}
+
+#profile h1 {
+    margin-top: clamp(20px, 3vh, 36px);
     color: #FFF;
-    font-size: 6vh;
-    font-style: normal;
+    font-size: clamp(2rem, 6vh, 4rem);
     font-weight: 300;
-    line-height: normal;
-    letter-spacing: 0.40vh;
-
+    line-height: 1.15;
+    letter-spacing: clamp(0.04rem, 0.4vh, 0.25rem);
 }
 
-div#profile p {
+.continue-button {
+    width: min(100%, 760px);
+    margin-top: clamp(18px, 3vh, 32px);
+    padding: 10px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#continueInstruction {
     color: #FFF;
-    font-size: 4vh;
-    font-style: normal;
+    font-size: clamp(1.15rem, 4vh, 2.7rem);
     font-weight: 100;
-    line-height: normal;
-    letter-spacing: 0.30vh;
+    line-height: 1.35;
+    letter-spacing: clamp(0.02rem, 0.3vh, 0.2rem);
 }
 
-div.redes {
-    justify-content: center;
+.redes {
     display: flex;
-    gap: 5vh;
-    margin: 6vh 6vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: start;
+    gap: clamp(12px, 3vh, 32px);
+    margin-top: clamp(28px, 5vh, 56px);
 }
 
-div.redes img {
-    height: 7vh;
-    width: 7vh;
+.redes a,
+.social-button {
+    display: grid;
+    place-items: center;
+    width: clamp(48px, 7vh, 76px);
+    height: clamp(48px, 7vh, 76px);
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.redes img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.joycon-button:focus-visible,
+.continue-button:focus-visible,
+.redes a:focus-visible,
+.social-button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .joycon-button,
+    .redes a,
+    .social-button,
+    .continue-button {
+        transition: transform 180ms ease, opacity 180ms ease;
+    }
+
+    .joycon-button:hover,
+    .redes a:hover,
+    .social-button:hover {
+        transform: scale(1.06);
+    }
+
+    .continue-button:hover {
+        opacity: 0.78;
+    }
+}
+
+/* Tablets e telas estreitas: Joy-Cons viram laterais compactas, sem encolher o perfil inteiro. */
+@media (max-width: 900px) {
+    #controll {
+        grid-template-columns: clamp(72px, 16vw, 120px) minmax(0, 1fr) clamp(72px, 16vw, 120px);
+    }
+
+    #left_joycon,
+    #right_joycon {
+        grid-template-rows: repeat(4, 1fr);
+        overflow: hidden;
+    }
+
+    #menos,
+    #mais {
+        width: clamp(22px, 5vw, 34px);
+        margin-top: max(24px, 5vh);
+    }
+
+    #left_stick,
+    #right_stick {
+        width: min(72%, 76px);
+    }
+
+    #button_arrow,
+    #button_joycon {
+        width: min(82%, 92px);
+    }
+
+    #home {
+        width: min(58%, 52px);
+    }
+
+    #profile {
+        padding-inline: clamp(12px, 3vw, 28px);
+    }
+
+    #mario {
+        width: clamp(112px, 22vw, 180px);
+    }
+
+    #profile h1 {
+        font-size: clamp(1.8rem, 6vw, 3rem);
+    }
+
+    #continueInstruction {
+        font-size: clamp(1rem, 3.4vw, 1.6rem);
+    }
+}
+
+/* Smartphones em retrato: mantém a silhueta do Switch e prioriza legibilidade do centro. */
+@media (max-width: 600px) and (orientation: portrait) {
+    #controll {
+        grid-template-columns: clamp(48px, 15vw, 68px) minmax(0, 1fr) clamp(48px, 15vw, 68px);
+    }
+
+    #profile {
+        grid-template-rows: auto auto auto 1fr;
+        padding: clamp(24px, 6vh, 52px) 10px 20px;
+    }
+
+    #mario {
+        width: clamp(96px, 31vw, 138px);
+        align-self: center;
+    }
+
+    #profile h1 {
+        margin-top: 18px;
+        font-size: clamp(1.45rem, 7.2vw, 2rem);
+        letter-spacing: 0.03rem;
+    }
+
+    .continue-button {
+        margin-top: 20px;
+        padding-inline: 4px;
+    }
+
+    #continueInstruction {
+        font-size: clamp(0.88rem, 4.2vw, 1.08rem);
+        font-weight: 200;
+        letter-spacing: 0;
+    }
+
+    .redes {
+        align-self: center;
+        gap: 8px;
+        margin-top: 26px;
+    }
+
+    .redes a,
+    .social-button {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+    }
+
+    #menos,
+    #mais {
+        width: min(55%, 28px);
+        margin-inline: 0;
+        justify-self: center;
+    }
+
+    #button_arrow,
+    #button_joycon {
+        width: 82%;
+    }
+
+    #left_stick,
+    #right_stick {
+        width: 74%;
+    }
+
+    #home {
+        width: 62%;
+    }
+}
+
+/* Telefones em landscape / telas muito baixas. */
+@media (max-height: 560px) and (orientation: landscape) {
+    #controll {
+        grid-template-columns: clamp(90px, 33vh, 170px) minmax(0, 1fr) clamp(90px, 33vh, 170px);
+    }
+
+    #profile {
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-rows: auto auto 1fr;
+        column-gap: clamp(16px, 4vw, 40px);
+        padding: 18px clamp(16px, 3vw, 36px);
+        text-align: left;
+    }
+
+    #mario {
+        grid-row: 1 / span 2;
+        width: clamp(90px, 32vh, 160px);
+        align-self: center;
+    }
+
+    #profile h1 {
+        margin-top: 0;
+        align-self: end;
+        justify-self: start;
+        font-size: clamp(1.5rem, 7vh, 2.5rem);
+    }
+
+    .continue-button {
+        margin-top: 8px;
+        padding: 6px 0;
+        justify-self: start;
+        text-align: left;
+    }
+
+    #continueInstruction {
+        font-size: clamp(0.85rem, 4vh, 1.25rem);
+    }
+
+    .redes {
+        grid-column: 1 / -1;
+        align-self: center;
+        justify-self: center;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .redes a,
+    .social-button {
+        width: 42px;
+        height: 42px;
+    }
+
+    #menos,
+    #mais {
+        margin-top: 16px;
+    }
+
+    #button_arrow,
+    #button_joycon {
+        width: min(72%, 90px);
+    }
+
+    #left_stick,
+    #right_stick {
+        width: min(58%, 68px);
+    }
+
+    #home {
+        width: min(42%, 46px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* ====================================================== UX / MICROINTERAÇÕES ====================================================== */
+#left_joycon,
+#right_joycon,
+#profile,
+#mario,
+#profile h1,
+.continue-button,
+.redes {
+    transition:
+        transform var(--ux-enter, 420ms) var(--ux-ease, ease-out),
+        opacity var(--ux-enter, 420ms) ease;
+}
+
+.js body[data-page="landing"]:not(.ux-ready) #left_joycon {
+    opacity: 0.65;
+    transform: translateX(-28px);
+}
+
+.js body[data-page="landing"]:not(.ux-ready) #right_joycon {
+    opacity: 0.65;
+    transform: translateX(28px);
+}
+
+.js body[data-page="landing"]:not(.ux-ready) #mario,
+.js body[data-page="landing"]:not(.ux-ready) #profile h1,
+.js body[data-page="landing"]:not(.ux-ready) .continue-button,
+.js body[data-page="landing"]:not(.ux-ready) .redes {
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+.js body[data-page="landing"].ux-ready #profile h1 {
+    transition-delay: 70ms;
+}
+
+.js body[data-page="landing"].ux-ready .continue-button {
+    transition-delay: 130ms;
+}
+
+.js body[data-page="landing"].ux-ready .redes {
+    transition-delay: 190ms;
+}
+
+.continue-button {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.035);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition:
+        transform var(--ux-fast, 150ms) var(--ux-ease, ease-out),
+        background-color var(--ux-fast, 150ms) ease,
+        border-color var(--ux-fast, 150ms) ease,
+        opacity var(--ux-enter, 420ms) ease;
+}
+
+.continue-button::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 9px;
+    opacity: 0;
+    pointer-events: none;
+    animation: continuePulse 2.2s ease-out 1.1s infinite;
+}
+
+@keyframes continuePulse {
+    0%, 58%, 100% {
+        opacity: 0;
+        transform: scale(0.985);
+    }
+    72% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
+.joycon-button,
+.redes a,
+.social-button {
+    transition:
+        transform var(--ux-fast, 150ms) var(--ux-ease, ease-out),
+        filter var(--ux-fast, 150ms) ease,
+        opacity var(--ux-fast, 150ms) ease;
+}
+
+.joycon-button:active,
+.redes a:active,
+.social-button:active {
+    transform: scale(0.91);
+    filter: brightness(0.9);
+}
+
+.continue-button:active {
+    transform: scale(0.97);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.32);
+}
+
+body.landing-activated #left_joycon {
+    transform: translateX(5px);
+}
+
+body.landing-activated #right_joycon {
+    transform: translateX(-5px);
+}
+
+body.landing-activated #profile {
+    transform: scale(0.99);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .continue-button:hover {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.3);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+    #profile {
+        padding-top: max(clamp(24px, 6vh, 52px), calc(var(--ux-safe-top, 0px) + 18px));
+        padding-bottom: max(20px, calc(var(--ux-safe-bottom, 0px) + 14px));
+    }
+
+    .continue-button {
+        min-height: 48px;
+        border-radius: 14px;
+        padding: 9px 7px;
+    }
+
+    .continue-button::after {
+        border-radius: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .continue-button::after {
+        display: none;
+    }
+
+    .js body[data-page="landing"]:not(.ux-ready) #left_joycon,
+    .js body[data-page="landing"]:not(.ux-ready) #right_joycon,
+    .js body[data-page="landing"]:not(.ux-ready) #mario,
+    .js body[data-page="landing"]:not(.ux-ready) #profile h1,
+    .js body[data-page="landing"]:not(.ux-ready) .continue-button,
+    .js body[data-page="landing"]:not(.ux-ready) .redes {
+        opacity: 1;
+        transform: none;
+    }
 }

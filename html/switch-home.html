@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="icon" href="img/switch.png">
     <script src="../js/app.js" defer></script>
     <link rel="stylesheet" href="../css/switch-home.css">
+    <link rel="stylesheet" href="../css/ux.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#d3d3d3">
     <title>Switch Home</title>
 </head>
-<body>
-    <header id="navbar">
+<body data-page="switch-home">
+    <header id="navbar" class="switch-header">
         <div id="logo">
             <img src="img/mario.png" alt="Mario">
             <p>Vinícius Barros de Melo</p>
         </div>
-        <div id="wifibateria">
-            <img src="img/Wifi.svg" alt="Wifi">
-            <img src="img/BatteryFull.svg" alt="Bateria">
+        <div id="wifibateria" aria-label="Indicadores do sistema">
+            <img src="img/Wifi.svg" alt="Wi-Fi">
+            <img src="img/BatteryFull.svg" alt="Bateria cheia">
         </div>
     </header>
-        <nav id="navegacao">
-            <a href="sobremim.html">
-                <div class="container-imagem">
-                    <img src="img/sobre-mim.png" alt="sobre mim" class="imagem-topo">
-                    <img src="img/sobre-mim-hover.png" alt="sobre mim">
-                </div>
+
+    <main>
+        <nav id="navegacao" aria-label="Navegação principal" data-console-nav>
+            <a href="sobremim.html" aria-label="Sobre mim" data-console-card>
+                <span class="container-imagem">
+                    <img src="img/sobre-mim-hover.png" alt="" aria-hidden="true" class="imagem-base">
+                    <img src="img/sobre-mim.png" alt="Sobre mim" class="imagem-topo">
+                </span>
             </a>
-            <a href="skills.html">
-                <div class="container-imagem">
+            <a href="skills.html" aria-label="Skills" data-console-card>
+                <span class="container-imagem">
+                    <img src="img/skills-hover.png" alt="" aria-hidden="true" class="imagem-base">
                     <img src="img/dev.png" alt="Skills" class="imagem-topo">
-                    <img src="img/skills-hover.png" alt="Skills">
-                </div>
+                </span>
             </a>
-            <a href="experiencias.html">
-                <div class="container-imagem">
-                    <img src="img/experiencias.png" alt="Experiencias" 
-                    class="imagem-topo">
-                    <img src="img/experiencias-hover.png" alt="Experiencias">
-                </div>
+            <a href="experiencias.html" aria-label="Experiências" data-console-card>
+                <span class="container-imagem">
+                    <img src="img/experiencias-hover.png" alt="" aria-hidden="true" class="imagem-base">
+                    <img src="img/experiencias.png" alt="Experiências" class="imagem-topo">
+                </span>
             </a>
-            <a href="../content/curriculo-vinicius-barros.pdf" download="curriculo-vinicius-barros.pdf" target="_blank">
-                <div class="container-imagem">
-                    <img src="img/CV.png" alt="Curriculum" class="imagem-topo">
-                    <img src="img/cv-hover.png" alt="Curriculum">
-                </div>
+            <a href="../content/curriculo-vinicius-barros.pdf" download="curriculo-vinicius-barros.pdf" target="_blank" rel="noopener noreferrer" aria-label="Baixar Curriculum Vitae" data-console-card>
+                <span class="container-imagem">
+                    <img src="img/cv-hover.png" alt="" aria-hidden="true" class="imagem-base">
+                    <img src="img/CV.png" alt="Curriculum Vitae" class="imagem-topo">
+                </span>
             </a>
         </nav>
-        <div id="redes">
+
+        <nav id="redes" aria-label="Atalhos e redes sociais">
             <div id="redes-icons">
-                <a href="../index.html">
-                    <img src="img/HouseFill.svg" alt="Home">
+                <a href="../index.html" aria-label="Voltar à tela inicial">
+                    <img src="img/HouseFill.svg" alt="">
                 </a>
-                <a href="https://github.com/vbmelo-hub" target="_blank">
-                    <img src="img/Github-escuro.svg" alt="Github">
+                <a href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <img src="img/Github-escuro.svg" alt="">
                 </a>
-                <a href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                    <img src="img/Linkedin-escuro.svg" alt="Linkedin">
+                <a href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img src="img/Linkedin-escuro.svg" alt="">
                 </a>
-                <a href="https://www.instagram.com/vinixius_ba/" target="_blank">
-                    <img src="img/Instagram-escuro.svg" alt="Instagram">
+                <a href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="img/Instagram-escuro.svg" alt="">
                 </a>
-                <a href="">
-                    <img src="img/discord-escuro.svg" alt="Discord" onclick="copiarTexto()" style="cursor: pointer;">
+                <button class="switch-social-button" type="button" data-copy-discord aria-label="Copiar usuário do Discord">
+                    <img src="img/discord-escuro.svg" alt="">
+                </button>
+                <a href="../index.html" aria-label="Desligar e voltar para a tela inicial">
+                    <img src="img/Power.svg" alt="">
                 </a>
-                <img src="img/Power.svg" alt="Power off">
             </div>
-        </div>
-    </body>
+        </nav>
+    </main>
+</body>
 </html>

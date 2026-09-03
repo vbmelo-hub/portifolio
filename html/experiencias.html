@@ -1,88 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="icon" href="img/Vimeo.svg">
     <script src="../js/app.js" defer></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/ux.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08070b">
     <title>Experiências</title>
-  </head>
-  <body>
+</head>
+<body data-page="internal">
     <header id="navbar">
-      <div id="logo">
-          <a href="sobremim.html">
-            <img src="img/Vimeo.svg" alt="Vimeo logo">
-        </a>
-      </div>
-      <ul>
-        <li class="hovering"><a href="switch-home.html">HOME</a></li>
-        <li class="hovering"><a href="sobremim.html">SOBRE</a></li>
-        <li class="hovering"><a href="skills.html">SKILLS</a></li>
-        <li class="hovering">
-          <a href="experiencias.html" id="active">EXPERIÊNCIAS</a>
-        </li>
-        <li class="hovering"><a href="comunicacao.html">COMUNICAÇÃO</a></li>
-        <li class="hovering">
-          <a
-            href="../content/curriculo-vinicius-barros.pdf"
-            download="curriculo-vinicius-barros.pdf"
-            target="_blank"
-            >CURRICULUM VITAE</a
-          >
-        </li>
-      </ul>
-      <div class="nav-right"></div>
+        <div id="logo">
+            <a href="sobremim.html" aria-label="Ir para Sobre mim">
+                <img src="img/Vimeo.svg" alt="Vimeo logo">
+            </a>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Navegação principal">
+            <ul id="primary-navigation">
+                <li class="hovering"><a href="switch-home.html">HOME</a></li>
+                <li class="hovering"><a href="sobremim.html">SOBRE</a></li>
+                <li class="hovering"><a href="skills.html">SKILLS</a></li>
+                <li class="hovering"><a href="experiencias.html">EXPERIÊNCIAS</a></li>
+                <li class="hovering"><a href="comunicacao.html">COMUNICAÇÃO</a></li>
+                <li class="hovering"><a href="../content/curriculo-vinicius-barros.pdf" download="curriculo-vinicius-barros.pdf" target="_blank" rel="noopener noreferrer">CURRICULUM VITAE</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-      <div class="experiencias">
-        <a href="https://www.ifac.edu.br/home" 
-           target="_blank">
-          <img src="img/spi.png" alt="Sistemas Para Internet" class="hovering">
-        </a>
-        <a href="https://www.escoteiros.org.br" 
-           target="_blank">
-          <img src="img/escoteiros.png" alt="Escoteiros do Brasil" class="hovering">
-        </a>
-        <a href="https://web.ifac.edu.br/incubac/eu-programo-robos/" 
-           target="_blank">
-          <img src="img/euProgramoRobos.png" alt="Eu Programo Robôs" class="hovering">
-        </a>
-      </div>
-      <div id="webAcademy">
-        <a href="https://webacademy.ufac.br" 
-           target="_blank">
-          <img src="img/webAcademy.png" alt="Web Academy" class="hovering">
-        </a>
-      </div>
+        <div class="experiencias">
+            <a href="https://www.ifac.edu.br/home" target="_blank" rel="noopener noreferrer">
+                <img src="img/spi.png" alt="Sistemas Para Internet" class="hovering" decoding="async">
+            </a>
+            <a href="https://www.escoteiros.org.br" target="_blank" rel="noopener noreferrer">
+                <img src="img/escoteiros.png" alt="Escoteiros do Brasil" class="hovering" loading="lazy" decoding="async">
+            </a>
+            <a href="https://web.ifac.edu.br/incubac/eu-programo-robos/" target="_blank" rel="noopener noreferrer">
+                <img src="img/euProgramoRobos.png" alt="Eu Programo Robôs" class="hovering" loading="lazy" decoding="async">
+            </a>
+            <a href="https://webacademy.ufac.br" target="_blank" rel="noopener noreferrer" class="webacademy-card">
+                <img src="img/webAcademy.png" alt="Web Academy" class="hovering" loading="lazy" decoding="async">
+            </a>
+        </div>
     </main>
-  </body>
-  <table>
-    <tr>
-      <td
-        class="hovering"
-        onclick="copiarEmail()"
-        tabindex="0"
-        onkeyup="handleKey(event)"
-      >
-        email
-      </td>
-      <td class="hovering">
-        <a href="https://github.com/vbmelo-hub" target="_blank">github</a>
-      </td>
-      <td class="hovering">
-        <a
-          href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          target="_blank"
-          >linkedin</a
-        >
-      </td>
-      <td class="hovering">
-        <a href="https://www.instagram.com/vinixius_ba/" target="_blank"
-          >instagram</a
-        >
-      </td>
-    </tr>
-  </table>
+
+    <footer class="site-footer">
+        <nav aria-label="Redes sociais e contato">
+            <button type="button" class="footer-link hovering" data-copy-email>email</button>
+            <a class="footer-link hovering" href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer">github</a>
+            <a class="footer-link hovering" href="https://www.linkedin.com/in/vb-melo?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">linkedin</a>
+            <a class="footer-link hovering" href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer">instagram</a>
+        </nav>
+    </footer>
+</body>
 </html>
