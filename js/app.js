@@ -412,36 +412,265 @@ function setupRevealAnimations() {
 setupRevealAnimations();
 
 /* ======================================================
-   FORMULÁRIO DE CONTATO
-   ====================================================== */
-const contactForm = document.querySelector("form[data-contact-form]");
+   FORMULÁRIO DE CONTATO - FORMSPREE
+====================================================== */
+
+const contactForm = document.querySelector("[data-contact-form]");
 
 if (contactForm) {
-  const submitButton = contactForm.querySelector('button[type="submit"]');
-  const submitLabel = contactForm.querySelector("[data-submit-label]");
-  const defaultSubmitText = submitLabel?.textContent || "Enviar Mensagem";
 
-  const restoreSubmitState = () => {
-    contactForm.classList.remove("is-submitting");
-    contactForm.removeAttribute("aria-busy");
-    if (submitButton) submitButton.disabled = false;
-    if (submitLabel) submitLabel.textContent = defaultSubmitText;
-  };
+    const submitButton =
+        contactForm.querySelector('button[type="submit"]');
 
-  contactForm.addEventListener("submit", () => {
-    if (!contactForm.checkValidity()) return;
+    const submitLabel =
+        contactForm.querySelector("[data-submit-label]");
 
-    contactForm.classList.add("is-submitting");
-    contactForm.setAttribute("aria-busy", "true");
-    if (submitButton) submitButton.disabled = true;
-    if (submitLabel) submitLabel.textContent = "Abrindo e-mail…";
-    showToast("Abrindo seu aplicativo de e-mail…", "info");
+    const defaultSubmitText =
+        submitLabel?.textContent.trim() || "Enviar Mensagem";
 
-    // mailto: depende do aplicativo do usuário e não retorna confirmação real.
-    window.setTimeout(restoreSubmitState, 1800);
-  });
 
-  window.addEventListener("pageshow", restoreSubmitState);
+    contactForm.addEventListener(
+        "submit",
+        async (event) => {
+
+            event.preventDefault();
+
+
+            /* ------------------------------------------
+               Validação do HTML
+            ------------------------------------------ */
+
+            if (!contactForm.checkValidity()) {
+
+                contactForm.reportValidity();
+
+                return;
+
+            }
+
+
+            /* ------------------------------------------
+               Estado de carregamento
+            ------------------------------------------ */
+
+            try {
+
+                contactForm.classList.add(
+                    "is-submitting"
+                );
+
+                contactForm.setAttribute(
+                    "aria-busy",
+                    "true"
+                );
+
+
+                if (submitButton) {
+
+                    submitButton.disabled = true;
+
+                }
+
+
+                if (submitLabel) {
+
+                    submitLabel.textContent =
+                        "Enviando...";
+
+                }
+
+
+                /* --------------------------------------
+                   Dados do formulário
+                -------------------------------------- */
+
+                const formData =
+                    new FormData(contactForm);
+
+
+                /* --------------------------------------
+                   Envio para o Formspree
+                -------------------------------------- */
+
+                const response =
+                    await fetch(
+                        contactForm.action,
+                        {
+                            method: "POST",
+
+                            body: formData,
+
+                            headers: {
+                                Accept: "application/json"
+                            }
+                        }
+                    );
+
+
+                /* --------------------------------------
+                   Sucesso
+                -------------------------------------- */
+
+                if (response.ok) {
+
+                    contactForm.reset();
+
+
+                    if (
+                        typeof showToast ===
+                        "function"
+                    ) {
+
+                        showToast(
+                            "Mensagem enviada com sucesso!",
+                            "success"
+                        );
+
+                    }
+
+                    else {
+
+                        alert(
+                            "Mensagem enviada com sucesso!"
+                        );
+
+                    }
+
+                }
+
+
+                /* --------------------------------------
+                   Erro retornado
+                -------------------------------------- */
+
+                else {
+
+                    let errorMessage =
+                        "Não foi possível enviar a mensagem.";
+
+
+                    try {
+
+                        const data =
+                            await response.json();
+
+
+                        if (
+                            data?.errors?.length
+                        ) {
+
+                            errorMessage =
+                                data.errors
+                                    .map(
+                                        error =>
+                                            error.message
+                                    )
+                                    .join(" ");
+
+                        }
+
+                    }
+
+                    catch {
+                        // mantém a mensagem padrão
+                    }
+
+
+                    if (
+                        typeof showToast ===
+                        "function"
+                    ) {
+
+                        showToast(
+                            errorMessage,
+                            "error"
+                        );
+
+                    }
+
+                    else {
+
+                        alert(
+                            errorMessage
+                        );
+
+                    }
+
+                }
+
+            }
+
+
+            /* ------------------------------------------
+               Erro de conexão
+            ------------------------------------------ */
+
+            catch (error) {
+
+                console.error(
+                    "Erro ao enviar mensagem:",
+                    error
+                );
+
+
+                if (
+                    typeof showToast ===
+                    "function"
+                ) {
+
+                    showToast(
+                        "Erro de conexão. Tente novamente.",
+                        "error"
+                    );
+
+                }
+
+                else {
+
+                    alert(
+                        "Erro de conexão. Tente novamente."
+                    );
+
+                }
+
+            }
+
+
+            /* ------------------------------------------
+               Restaurar botão
+            ------------------------------------------ */
+
+            finally {
+
+                contactForm.classList.remove(
+                    "is-submitting"
+                );
+
+                contactForm.removeAttribute(
+                    "aria-busy"
+                );
+
+
+                if (submitButton) {
+
+                    submitButton.disabled =
+                        false;
+
+                }
+
+
+                if (submitLabel) {
+
+                    submitLabel.textContent =
+                        defaultSubmitText;
+
+                }
+
+            }
+
+        }
+    );
+
 }
 
 /* ======================================================

@@ -1,68 +1,297 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <script>document.documentElement.classList.add('js');</script>
-    <link rel="icon" href="img/logo-vb-icon.svg">
+    <script>
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="icon" href="img/logo-vb-icon.svg" type="image/svg+xml">
+
     <script src="../js/app.js" defer></script>
+
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/ux.css">
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#08070b">
-    <title>Comunicação</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08070b"
+    >
+
+    <meta
+        name="description"
+        content="Entre em contato com Vinícius Barros de Melo."
+    >
+
+    <title>Comunicação | Vinícius Barros de Melo</title>
 </head>
+
 <body data-page="internal">
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
     <header id="navbar">
+
         <div id="logo">
-            <a href="sobremim.html" aria-label="Ir para Sobre mim">
-                <img src="img/Vimeo.svg" alt="Vimeo logo">
+
+            <a
+                href="sobremim.html"
+                aria-label="Ir para Sobre mim"
+            >
+                <img
+                    src="img/logo-vb-navbar.svg"
+                    alt="Logo de Vinícius Barros"
+                >
             </a>
+
         </div>
-        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
-            <span></span><span></span><span></span>
+
+        <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <nav class="site-nav" aria-label="Navegação principal">
+
+        <nav
+            class="site-nav"
+            aria-label="Navegação principal"
+        >
+
             <ul id="primary-navigation">
-                <li class="hovering"><a href="switch-home.html">HOME</a></li>
-                <li class="hovering"><a href="sobremim.html">SOBRE</a></li>
-                <li class="hovering"><a href="skills.html">SKILLS</a></li>
-                <li class="hovering"><a href="projetos.html">PROJETOS</a></li>
-                <li class="hovering"><a href="experiencias.html">EXPERIÊNCIAS</a></li>
-                <li class="hovering"><a href="comunicacao.html">COMUNICAÇÃO</a></li>
-                <li class="hovering"><a href="../content/curriculo-vinicius-barros.pdf" download="curriculo-vinicius-barros.pdf" target="_blank" rel="noopener noreferrer">CURRICULUM VITAE</a></li>
+
+                <li class="hovering">
+                    <a href="switch-home.html">
+                        HOME
+                    </a>
+                </li>
+
+                <li class="hovering">
+                    <a href="sobremim.html">
+                        SOBRE
+                    </a>
+                </li>
+
+                <li class="hovering">
+                    <a href="skills.html">
+                        SKILLS
+                    </a>
+                </li>
+
+                <li class="hovering">
+                    <a href="projetos.html">
+                        PROJETOS
+                    </a>
+                </li>
+
+                <li class="hovering">
+                    <a href="experiencias.html">
+                        EXPERIÊNCIAS
+                    </a>
+                </li>
+
+                <li class="hovering">
+                    <a href="comunicacao.html">
+                        COMUNICAÇÃO
+                    </a>
+                </li>
+
+                <li class="hovering">
+
+                    <a
+                        href="../content/curriculo-vinicius-barros.pdf"
+                        download="curriculo-vinicius-barros.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        CURRICULUM VITAE
+                    </a>
+
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
 
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
     <main>
-        <p class="test">EM DESENVOLVIMENTO...</p>
-        <form action="mailto:vinicius.meloin@gmail.com" method="post" enctype="text/plain" data-contact-form>
+
+        <h1>
+            Entre em Contato
+        </h1>
+
+        <p class="contact-intro">
+            Tem alguma oportunidade, projeto ou ideia?
+            Envie uma mensagem e entrarei em contato assim que possível.
+        </p>
+
+
+        <!-- =================================================
+             FORMULÁRIO
+        ================================================== -->
+
+        <form
+            action="https://formspree.io/f/mzebgave"
+            method="POST"
+            data-contact-form
+        >
+
+            <!-- Nome -->
+
             <div class="form-field">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" autocomplete="name" required>
+
+                <label for="nome">
+                    Nome
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome completo"
+                    autocomplete="name"
+                    required
+                >
+
             </div>
+
+
+            <!-- Email -->
+
             <div class="form-field">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" inputmode="email" required>
+
+                <label for="email">
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seuemail@exemplo.com"
+                    autocomplete="email"
+                    inputmode="email"
+                    required
+                >
+
             </div>
+
+
+            <!-- Mensagem -->
+
             <div class="form-field">
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..." autocomplete="off" required></textarea>
+
+                <label for="mensagem">
+                    Mensagem
+                </label>
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="6"
+                    placeholder="Escreva sua mensagem aqui..."
+                    required
+                ></textarea>
+
             </div>
+
+
+            <!-- Campo opcional para assunto -->
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="Nova mensagem pelo portfólio"
+            >
+
+
+            <!-- Botão -->
+
             <div class="button-enviar">
-                <button type="submit"><span data-submit-label>Enviar Mensagem</span></button>
+
+                <button type="submit">
+
+                    <span data-submit-label>
+                        Enviar Mensagem
+                    </span>
+
+                </button>
+
             </div>
+
         </form>
+
     </main>
 
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer class="site-footer">
+
         <nav aria-label="Redes sociais e contato">
-            <button type="button" class="footer-link hovering" data-copy-email>email</button>
-            <a class="footer-link hovering" href="https://github.com/vbmelo-hub" target="_blank" rel="noopener noreferrer">github</a>
-            <a class="footer-link hovering" href="https://www.linkedin.com/in/vb-melo/" target="_blank" rel="noopener noreferrer">linkedin</a>
-            <a class="footer-link hovering" href="https://www.instagram.com/vinixius_ba/" target="_blank" rel="noopener noreferrer">instagram</a>
+
+            <button
+                type="button"
+                class="footer-link hovering"
+                data-copy-email
+            >
+                email
+            </button>
+
+            <a
+                class="footer-link hovering"
+                href="https://github.com/vbmelo-hub"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                github
+            </a>
+
+            <a
+                class="footer-link hovering"
+                href="https://www.linkedin.com/in/vb-melo/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                linkedin
+            </a>
+
+            <a
+                class="footer-link hovering"
+                href="https://www.instagram.com/vinixius_ba/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                instagram
+            </a>
+
         </nav>
+
     </footer>
+
 </body>
+
 </html>
